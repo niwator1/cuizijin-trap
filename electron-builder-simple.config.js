@@ -11,7 +11,10 @@ module.exports = {
   },
   
   files: [
-    'dist/**/*',
+    'main/**/*',
+    'renderer/**/*',
+    'shared/**/*',
+    'database/**/*',
     'node_modules/**/*',
     'package.json'
   ],

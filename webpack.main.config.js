@@ -7,8 +7,8 @@ module.exports = [
     target: 'electron-main',
     entry: './src/main/index.ts',
     output: {
-      path: path.resolve(__dirname, 'dist/main'),
-      filename: 'index.js',
+      path: path.resolve(__dirname, 'dist'),
+      filename: 'main/index.js',
     },
     resolve: {
       extensions: ['.ts', '.js'],
@@ -57,8 +57,8 @@ module.exports = [
     target: 'electron-preload',
     entry: './src/main/preload.ts',
     output: {
-      path: path.resolve(__dirname, 'dist/main'),
-      filename: 'preload.js',
+      path: path.resolve(__dirname, 'dist'),
+      filename: 'main/preload.js',
     },
     resolve: {
       extensions: ['.ts', '.js'],
