@@ -32,7 +32,7 @@ const iconSizes = {
   'tray-icon@2x.png': 64
 };
 
-// 由于我们没有图像处理库，我们将创建一个简化的HTML文件来手动转换
+// 生成转换工具HTML
 function generateConversionHTML() {
   const htmlContent = `<!DOCTYPE html>
 <html>
@@ -42,41 +42,42 @@ function generateConversionHTML() {
         body { font-family: Arial, sans-serif; padding: 20px; }
         .icon-container { margin: 20px 0; }
         canvas { border: 1px solid #ccc; margin: 10px; }
-        .download-link { display: block; margin: 5px 0; }
+        .download-link { display: block; margin: 5px 0; color: #007cba; text-decoration: none; }
+        .download-link:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
     <h1>崔子瑾诱捕器 - 图标转换工具</h1>
-    <p>请在浏览器中打开此文件，然后右键点击每个图标保存为PNG格式</p>
-
+    <p>请在浏览器中打开此文件，然后点击下载链接保存PNG格式图标</p>
+    
     ${Object.entries(iconSizes).map(([filename, size]) => `
     <div class="icon-container">
         <h3>${filename} (${size}x${size})</h3>
         <canvas id="canvas-${size}" width="${size}" height="${size}"></canvas>
-        <a href="#" class="download-link" onclick="downloadCanvas('canvas-${size}', '${filename}')">下载 ${filename}</a>
+        <a href="#" class="download-link" onclick="downloadCanvas('canvas-${size}', '${filename}')">📥 下载 ${filename}</a>
     </div>
     `).join('')}
 
     <script>
-        const svgContent = \`${svgContent}\`;
-
+        const svgContent = \`${svgContent.replace(/`/g, '\\`')}\`;
+        
         function loadSVGToCanvas(canvasId, size) {
             const canvas = document.getElementById(canvasId);
             const ctx = canvas.getContext('2d');
-
+            
             const img = new Image();
             const svgBlob = new Blob([svgContent], {type: 'image/svg+xml'});
             const url = URL.createObjectURL(svgBlob);
-
+            
             img.onload = function() {
                 ctx.clearRect(0, 0, size, size);
                 ctx.drawImage(img, 0, 0, size, size);
                 URL.revokeObjectURL(url);
             };
-
+            
             img.src = url;
         }
-
+        
         function downloadCanvas(canvasId, filename) {
             const canvas = document.getElementById(canvasId);
             const link = document.createElement('a');
@@ -84,11 +85,13 @@ function generateConversionHTML() {
             link.href = canvas.toDataURL('image/png');
             link.click();
         }
-
+        
         // 加载所有图标
-        ${Object.entries(iconSizes).map(([filename, size]) =>
-          `loadSVGToCanvas('canvas-${size}', ${size});`
-        ).join('\n        ')}
+        window.onload = function() {
+            ${Object.entries(iconSizes).map(([filename, size]) => 
+              `loadSVGToCanvas('canvas-${size}', ${size});`
+            ).join('\n            ')}
+        };
     </script>
 </body>
 </html>`;
@@ -96,7 +99,7 @@ function generateConversionHTML() {
   const htmlPath = path.join(assetsDir, 'icon-converter.html');
   fs.writeFileSync(htmlPath, htmlContent, 'utf8');
   console.log('✅ 图标转换工具已生成:', htmlPath);
-  console.log('💡 请在浏览器中打开此文件来生成PNG图标');
+  return htmlPath;
 }
 
 // 创建基础的PNG图标（简化版本）
@@ -130,16 +133,16 @@ function main() {
   }
 
   // 生成转换工具
-  generateConversionHTML();
-
+  const htmlPath = generateConversionHTML();
+  
   // 创建基础PNG图标作为占位符
   createBasicPNGIcons();
-
+  
   console.log('');
   console.log('🎉 图标生成完成！');
   console.log('');
   console.log('📋 下一步操作：');
-  console.log('1. 在浏览器中打开 assets/icon-converter.html');
+  console.log(`1. 在浏览器中打开: ${htmlPath}`);
   console.log('2. 下载生成的PNG图标文件');
   console.log('3. 将下载的文件替换 assets/ 目录中的对应文件');
   console.log('4. 重新构建应用程序');
@@ -148,57 +151,3 @@ function main() {
 if (require.main === module) {
   main();
 }
-  
-  const svgContent = `
-    <svg width="${size}" height="${size}" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style="stop-color:#667eea"/>
-          <stop offset="100%" style="stop-color:#764ba2"/>
-        </linearGradient>
-        <linearGradient id="shield" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style="stop-color:#f093fb"/>
-          <stop offset="100%" style="stop-color:#f5576c"/>
-        </linearGradient>
-      </defs>
-      
-      <circle cx="256" cy="256" r="240" fill="url(#bg)"/>
-      <path d="M256 80 L180 120 L180 220 Q180 300 256 380 Q332 300 332 220 L332 120 Z" 
-            fill="url(#shield)" stroke="#fff" stroke-width="4"/>
-      <rect x="220" y="200" width="72" height="80" rx="8" fill="#ffecd2" stroke="#fff" stroke-width="3"/>
-      <path d="M235 200 L235 170 Q235 150 256 150 Q277 150 277 170 L277 200" 
-            fill="none" stroke="#ffecd2" stroke-width="8"/>
-      <circle cx="256" cy="230" r="8" fill="#764ba2"/>
-      <rect x="252" y="230" width="8" height="20" fill="#764ba2"/>
-      
-      <g transform="translate(380, 320)">
-        <circle cx="0" cy="0" r="20" fill="none" stroke="#f5576c" stroke-width="4"/>
-        <line x1="-14" y1="-14" x2="14" y2="14" stroke="#f5576c" stroke-width="4"/>
-      </g>
-    </svg>
-  `;
-  
-  return svgContent;
-}
-
-// 确保assets目录存在
-const assetsDir = path.join(__dirname, '..', 'assets');
-if (!fs.existsSync(assetsDir)) {
-  fs.mkdirSync(assetsDir, { recursive: true });
-}
-
-// 生成不同尺寸的图标
-Object.entries(iconSizes).forEach(([filename, size]) => {
-  const svgContent = generateIcon(size, filename);
-  const outputPath = path.join(assetsDir, filename.replace(/\.(ico|icns)$/, '.svg'));
-  
-  // 为每个尺寸创建SVG文件
-  fs.writeFileSync(outputPath, svgContent);
-  console.log(`Generated ${outputPath}`);
-});
-
-console.log('Icon generation completed!');
-console.log('Note: For production, consider using proper image conversion tools like:');
-console.log('- sharp (npm install sharp)');
-console.log('- electron-icon-builder');
-console.log('- imagemin');

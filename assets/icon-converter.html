@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>图标转换工具</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .icon-container { margin: 20px 0; }
+        canvas { border: 1px solid #ccc; margin: 10px; }
+        .download-link { display: block; margin: 5px 0; color: #007cba; text-decoration: none; }
+        .download-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>崔子瑾诱捕器 - 图标转换工具</h1>
+    <p>请在浏览器中打开此文件，然后点击下载链接保存PNG格式图标</p>
+    
+    
+    <div class="icon-container">
+        <h3>icon.png (512x512)</h3>
+        <canvas id="canvas-512" width="512" height="512"></canvas>
+        <a href="#" class="download-link" onclick="downloadCanvas('canvas-512', 'icon.png')">📥 下载 icon.png</a>
+    </div>
+    
+    <div class="icon-container">
+        <h3>icon@2x.png (1024x1024)</h3>
+        <canvas id="canvas-1024" width="1024" height="1024"></canvas>
+        <a href="#" class="download-link" onclick="downloadCanvas('canvas-1024', 'icon@2x.png')">📥 下载 icon@2x.png</a>
+    </div>
+    
+    <div class="icon-container">
+        <h3>tray-icon.png (32x32)</h3>
+        <canvas id="canvas-32" width="32" height="32"></canvas>
+        <a href="#" class="download-link" onclick="downloadCanvas('canvas-32', 'tray-icon.png')">📥 下载 tray-icon.png</a>
+    </div>
+    
+    <div class="icon-container">
+        <h3>tray-icon@2x.png (64x64)</h3>
+        <canvas id="canvas-64" width="64" height="64"></canvas>
+        <a href="#" class="download-link" onclick="downloadCanvas('canvas-64', 'tray-icon@2x.png')">📥 下载 tray-icon@2x.png</a>
+    </div>
+    
+
+    <script>
+        const svgContent = `<?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1751699891260" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3231" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M512 128a384 384 0 1 0 0 768 384 384 0 0 0 0-768zM42.666667 512C42.666667 252.8 252.8 42.666667 512 42.666667s469.333333 210.133333 469.333333 469.333333-210.133333 469.333333-469.333333 469.333333S42.666667 771.2 42.666667 512z m213.333333-128h170.666667v85.333333H256V384z m341.333333 0h170.666667v85.333333h-170.666667V384z m-270.08 277.333333A213.248 213.248 0 0 1 512 554.666667a213.248 213.248 0 0 1 184.746667 106.666666l21.376 36.906667-73.856 42.709333-21.333334-36.906666C600.746667 665.6 559.36 640 512 640s-88.704 25.642667-110.933333 64l-21.333334 36.949333-73.856-42.709333 21.333334-36.949333z" fill="#d81e06" p-id="3232"></path></svg>`;
+        
+        function loadSVGToCanvas(canvasId, size) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            
+            const img = new Image();
+            const svgBlob = new Blob([svgContent], {type: 'image/svg+xml'});
+            const url = URL.createObjectURL(svgBlob);
+            
+            img.onload = function() {
+                ctx.clearRect(0, 0, size, size);
+                ctx.drawImage(img, 0, 0, size, size);
+                URL.revokeObjectURL(url);
+            };
+            
+            img.src = url;
+        }
+        
+        function downloadCanvas(canvasId, filename) {
+            const canvas = document.getElementById(canvasId);
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+        
+        // 加载所有图标
+        window.onload = function() {
+            loadSVGToCanvas('canvas-512', 512);
+            loadSVGToCanvas('canvas-1024', 1024);
+            loadSVGToCanvas('canvas-32', 32);
+            loadSVGToCanvas('canvas-64', 64);
+        };
+    </script>
+</body>
+</html>

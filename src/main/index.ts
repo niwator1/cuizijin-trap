@@ -127,7 +127,13 @@ class MainApplication {
 
     // 设置窗口图标
     if (process.platform !== 'darwin') {
-      mainWindow.setIcon(path.join(__dirname, '../../assets/icon.png'));
+      try {
+        const iconPath = path.join(__dirname, '../../assets/icon.png');
+        console.log('Loading window icon from:', iconPath);
+        mainWindow.setIcon(iconPath);
+      } catch (error) {
+        console.log('Icon file not found, using default icon:', error instanceof Error ? error.message : String(error));
+      }
     }
 
     // 加载应用
@@ -169,10 +175,23 @@ class MainApplication {
 
   private createTray(): void {
     // 创建托盘图标
-    const trayIcon = nativeImage.createFromPath(
-      path.join(__dirname, '../../assets/tray-icon.png')
-    );
-    
+    let trayIcon;
+    try {
+      const trayIconPath = path.join(__dirname, '../../assets/tray-icon.png');
+      console.log('Loading tray icon from:', trayIconPath);
+      trayIcon = nativeImage.createFromPath(trayIconPath);
+
+      // 检查图标是否为空
+      if (trayIcon.isEmpty()) {
+        console.log('Tray icon is empty, using fallback');
+        trayIcon = nativeImage.createFromPath(path.join(__dirname, '../../assets/icon.png'));
+      }
+    } catch (error) {
+      console.log('Tray icon file not found, using default icon:', error instanceof Error ? error.message : String(error));
+      // 如果图标文件不存在，创建一个简单的默认图标
+      trayIcon = nativeImage.createEmpty();
+    }
+
     this.tray = new Tray(trayIcon);
     
     // 设置托盘菜单
@@ -592,7 +611,7 @@ class MainApplication {
       const notification = new Notification({
         title: options.title,
         body: options.body,
-        icon: path.join(__dirname, '../assets/icon.png'), // 应用图标路径
+        icon: path.join(__dirname, '../../assets/icon.png'), // 应用图标路径
         silent: false,
         urgency: options.type === 'warning' ? 'critical' : 'normal'
       });

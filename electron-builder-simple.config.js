@@ -18,6 +18,18 @@ module.exports = {
     'node_modules/**/*',
     'package.json'
   ],
+
+  // 额外文件
+  extraFiles: [
+    {
+      from: 'assets/icon.png',
+      to: 'assets/icon.png'
+    },
+    {
+      from: 'assets/tray-icon.png',
+      to: 'assets/tray-icon.png'
+    }
+  ],
   
   // Windows 配置 - 最简单版本
   win: {
@@ -27,6 +39,7 @@ module.exports = {
         arch: ['x64']
       }
     ],
+    icon: 'assets/icon.png',
     requestedExecutionLevel: 'requireAdministrator'
   },
   

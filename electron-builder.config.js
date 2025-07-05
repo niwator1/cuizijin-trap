@@ -28,13 +28,17 @@ module.exports = {
     }
   ],
   
-  // 排除的文件
-  // extraFiles: [
-  //   {
-  //     from: 'assets/icon.png',
-  //     to: 'icon.png'
-  //   }
-  // ], // 暂时禁用图标文件复制
+  // 额外文件
+  extraFiles: [
+    {
+      from: 'assets/icon.png',
+      to: 'assets/icon.png'
+    },
+    {
+      from: 'assets/tray-icon.png',
+      to: 'assets/tray-icon.png'
+    }
+  ],
   
   // 发布配置（用于自动更新）
   publish: {
@@ -79,7 +83,7 @@ module.exports = {
   // DMG 配置
   dmg: {
     title: '${productName} ${version}',
-    // icon: 'assets/icon.icns', // 暂时禁用图标
+    icon: 'assets/icon.png', // macOS图标
     background: 'assets/dmg-background.png',
     window: {
       width: 540,
@@ -112,7 +116,7 @@ module.exports = {
         arch: ['x64']
       }
     ],
-    // icon: 'assets/icon.ico', // 暂时禁用图标
+    icon: 'assets/icon.png', // Windows图标
     requestedExecutionLevel: 'requireAdministrator',
     
     // 代码签名配置
@@ -167,7 +171,7 @@ module.exports = {
         arch: ['x64']
       }
     ],
-    // icon: 'assets/icon.png', // 暂时禁用图标
+    icon: 'assets/icon.png', // Linux图标
     category: 'Utility',
     desktop: {
       Name: '崔子瑾诱捕器',
