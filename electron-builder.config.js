@@ -39,9 +39,9 @@ module.exports = {
   // 发布配置（用于自动更新）
   publish: {
     provider: 'github',
-    owner: 'your-github-username',
+    owner: 'niwator1',
     repo: 'cuizijin-trap',
-    private: true
+    private: false
   },
   
   // macOS 配置

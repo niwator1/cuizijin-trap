@@ -42,9 +42,9 @@ export class UpdateService extends EventEmitter {
     // 设置更新服务器（GitHub Releases）
     autoUpdater.setFeedURL({
       provider: 'github',
-      owner: 'your-github-username',
+      owner: 'niwator1',
       repo: 'cuizijin-trap',
-      private: true
+      private: false
     });
 
     // 监听更新事件
