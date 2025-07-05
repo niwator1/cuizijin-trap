@@ -1,0 +1,514 @@
+<testsuites id="" name="" tests="65" failures="16" skipped="41" errors="0" time="75.448338">
+<testsuite name="main/app-lifecycle.spec.ts" timestamp="2025-07-05T03:02:50.915Z" hostname="electron-main" tests="8" failures="0" skipped="0" time="39.918" errors="0">
+<testcase name="Electron主进程 - 应用生命周期 › 应用应该正常启动和关闭" classname="main/app-lifecycle.spec.ts" time="4.826">
+</testcase>
+<testcase name="Electron主进程 - 应用生命周期 › 应用应该创建系统托盘" classname="main/app-lifecycle.spec.ts" time="5.333">
+</testcase>
+<testcase name="Electron主进程 - 应用生命周期 › 应用应该处理多个窗口" classname="main/app-lifecycle.spec.ts" time="4.946">
+</testcase>
+<testcase name="Electron主进程 - 应用生命周期 › 应用应该正确处理深度链接" classname="main/app-lifecycle.spec.ts" time="4.94">
+</testcase>
+<testcase name="Electron主进程 - 应用生命周期 › 应用应该正确设置安全策略" classname="main/app-lifecycle.spec.ts" time="4.842">
+</testcase>
+<testcase name="Electron主进程 - 应用生命周期 › 应用应该正确处理未捕获的异常" classname="main/app-lifecycle.spec.ts" time="7.072">
+</testcase>
+<testcase name="Electron主进程 - 应用生命周期 › 应用应该正确管理内存使用" classname="main/app-lifecycle.spec.ts" time="2.062">
+</testcase>
+<testcase name="Electron主进程 - 应用生命周期 › 应用应该正确处理权限请求" classname="main/app-lifecycle.spec.ts" time="5.897">
+</testcase>
+</testsuite>
+<testsuite name="main/database-unit.spec.ts" timestamp="2025-07-05T03:02:50.915Z" hostname="electron-main" tests="23" failures="16" skipped="7" time="0.247" errors="0">
+<testcase name="FileDatabase 初始化 › 应该创建默认数据结构" classname="main/database-unit.spec.ts" time="0.007">
+<failure message="database-unit.spec.ts:39:7 应该创建默认数据结构" type="FAILURE">
+<![CDATA[  [electron-main] › main/database-unit.spec.ts:39:7 › FileDatabase 初始化 › 应该创建默认数据结构 ────────────────
+
+    TypeError: Cannot read properties of undefined (reading 'getPath')
+
+       at ../../src/main/database/FileDatabase.ts:22
+
+      20 |   constructor() {
+      21 |     // 获取用户数据目录
+    > 22 |     const userDataPath = app.getPath('userData');
+         |                              ^
+      23 |     this.dataPath = path.join(userDataPath, 'cuizijin-trap-data.json');
+      24 |     
+      25 |     // 初始化数据结构
+        at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)
+        at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12
+]]>
+</failure>
+</testcase>
+<testcase name="FileDatabase 初始化 › 应该创建数据文件" classname="main/database-unit.spec.ts" time="0.012">
+<failure message="database-unit.spec.ts:48:7 应该创建数据文件" type="FAILURE">
+<![CDATA[  [electron-main] › main/database-unit.spec.ts:48:7 › FileDatabase 初始化 › 应该创建数据文件 ──────────────────
+
+    TypeError: Cannot read properties of undefined (reading 'getPath')
+
+       at ../../src/main/database/FileDatabase.ts:22
+
+      20 |   constructor() {
+      21 |     // 获取用户数据目录
+    > 22 |     const userDataPath = app.getPath('userData');
+         |                              ^
+      23 |     this.dataPath = path.join(userDataPath, 'cuizijin-trap-data.json');
+      24 |     
+      25 |     // 初始化数据结构
+        at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)
+        at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12
+]]>
+</failure>
+</testcase>
+<testcase name="网站管理功能 › 添加有效网站" classname="main/database-unit.spec.ts" time="0.014">
+<failure message="database-unit.spec.ts:55:7 添加有效网站" type="FAILURE">
+<![CDATA[  [electron-main] › main/database-unit.spec.ts:55:7 › 网站管理功能 › 添加有效网站 ──────────────────────────────
+
+    TypeError: Cannot read properties of undefined (reading 'getPath')
+
+       at ../../src/main/database/FileDatabase.ts:22
+
+      20 |   constructor() {
+      21 |     // 获取用户数据目录
+    > 22 |     const userDataPath = app.getPath('userData');
+         |                              ^
+      23 |     this.dataPath = path.join(userDataPath, 'cuizijin-trap-data.json');
+      24 |     
+      25 |     // 初始化数据结构
+        at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)
+        at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12
+]]>
+</failure>
+</testcase>
+<testcase name="网站管理功能 › 添加无效URL应该失败" classname="main/database-unit.spec.ts" time="0.021">
+<failure message="database-unit.spec.ts:72:7 添加无效URL应该失败" type="FAILURE">
+<![CDATA[  [electron-main] › main/database-unit.spec.ts:72:7 › 网站管理功能 › 添加无效URL应该失败 ─────────────────────────
+
+    TypeError: Cannot read properties of undefined (reading 'getPath')
+
+       at ../../src/main/database/FileDatabase.ts:22
+
+      20 |   constructor() {
+      21 |     // 获取用户数据目录
+    > 22 |     const userDataPath = app.getPath('userData');
+         |                              ^
+      23 |     this.dataPath = path.join(userDataPath, 'cuizijin-trap-data.json');
+      24 |     
+      25 |     // 初始化数据结构
+        at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)
+        at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12
+]]>
+</failure>
+</testcase>
+<testcase name="网站管理功能 › 添加重复网站应该失败" classname="main/database-unit.spec.ts" time="0.016">
+<failure message="database-unit.spec.ts:84:7 添加重复网站应该失败" type="FAILURE">
+<![CDATA[  [electron-main] › main/database-unit.spec.ts:84:7 › 网站管理功能 › 添加重复网站应该失败 ──────────────────────────
+
+    TypeError: Cannot read properties of undefined (reading 'getPath')
+
+       at ../../src/main/database/FileDatabase.ts:22
+
+      20 |   constructor() {
+      21 |     // 获取用户数据目录
+    > 22 |     const userDataPath = app.getPath('userData');
+         |                              ^
+      23 |     this.dataPath = path.join(userDataPath, 'cuizijin-trap-data.json');
+      24 |     
+      25 |     // 初始化数据结构
+        at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)
+        at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12
+]]>
+</failure>
+</testcase>
+<testcase name="网站管理功能 › 获取网站列表" classname="main/database-unit.spec.ts" time="0.017">
+<failure message="database-unit.spec.ts:100:7 获取网站列表" type="FAILURE">
+<![CDATA[  [electron-main] › main/database-unit.spec.ts:100:7 › 网站管理功能 › 获取网站列表 ─────────────────────────────
+
+    TypeError: Cannot read properties of undefined (reading 'getPath')
+
+       at ../../src/main/database/FileDatabase.ts:22
+
+      20 |   constructor() {
+      21 |     // 获取用户数据目录
+    > 22 |     const userDataPath = app.getPath('userData');
+         |                              ^
+      23 |     this.dataPath = path.join(userDataPath, 'cuizijin-trap-data.json');
+      24 |     
+      25 |     // 初始化数据结构
+        at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)
+        at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12
+]]>
+</failure>
+</testcase>
+<testcase name="网站管理功能 › 过滤启用的网站" classname="main/database-unit.spec.ts" time="0.018">
+<failure message="database-unit.spec.ts:118:7 过滤启用的网站" type="FAILURE">
+<![CDATA[  [electron-main] › main/database-unit.spec.ts:118:7 › 网站管理功能 › 过滤启用的网站 ────────────────────────────
+
+    TypeError: Cannot read properties of undefined (reading 'getPath')
+
+       at ../../src/main/database/FileDatabase.ts:22
+
+      20 |   constructor() {
+      21 |     // 获取用户数据目录
+    > 22 |     const userDataPath = app.getPath('userData');
+         |                              ^
+      23 |     this.dataPath = path.join(userDataPath, 'cuizijin-trap-data.json');
+      24 |     
+      25 |     // 初始化数据结构
+        at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)
+        at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12
+]]>
+</failure>
+</testcase>
+<testcase name="网站管理功能 › 搜索网站" classname="main/database-unit.spec.ts" time="0.015">
+<failure message="database-unit.spec.ts:135:7 搜索网站" type="FAILURE">
+<![CDATA[  [electron-main] › main/database-unit.spec.ts:135:7 › 网站管理功能 › 搜索网站 ───────────────────────────────
+
+    TypeError: Cannot read properties of undefined (reading 'getPath')
+
+       at ../../src/main/database/FileDatabase.ts:22
+
+      20 |   constructor() {
+      21 |     // 获取用户数据目录
+    > 22 |     const userDataPath = app.getPath('userData');
+         |                              ^
+      23 |     this.dataPath = path.join(userDataPath, 'cuizijin-trap-data.json');
+      24 |     
+      25 |     // 初始化数据结构
+        at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)
+        at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12
+]]>
+</failure>
+</testcase>
+<testcase name="网站管理功能 › 更新网站信息" classname="main/database-unit.spec.ts" time="0.015">
+<failure message="database-unit.spec.ts:146:7 更新网站信息" type="FAILURE">
+<![CDATA[  [electron-main] › main/database-unit.spec.ts:146:7 › 网站管理功能 › 更新网站信息 ─────────────────────────────
+
+    TypeError: Cannot read properties of undefined (reading 'getPath')
+
+       at ../../src/main/database/FileDatabase.ts:22
+
+      20 |   constructor() {
+      21 |     // 获取用户数据目录
+    > 22 |     const userDataPath = app.getPath('userData');
+         |                              ^
+      23 |     this.dataPath = path.join(userDataPath, 'cuizijin-trap-data.json');
+      24 |     
+      25 |     // 初始化数据结构
+        at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)
+        at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12
+]]>
+</failure>
+</testcase>
+<testcase name="网站管理功能 › 切换网站状态" classname="main/database-unit.spec.ts" time="0.017">
+<failure message="database-unit.spec.ts:160:7 切换网站状态" type="FAILURE">
+<![CDATA[  [electron-main] › main/database-unit.spec.ts:160:7 › 网站管理功能 › 切换网站状态 ─────────────────────────────
+
+    TypeError: Cannot read properties of undefined (reading 'getPath')
+
+       at ../../src/main/database/FileDatabase.ts:22
+
+      20 |   constructor() {
+      21 |     // 获取用户数据目录
+    > 22 |     const userDataPath = app.getPath('userData');
+         |                              ^
+      23 |     this.dataPath = path.join(userDataPath, 'cuizijin-trap-data.json');
+      24 |     
+      25 |     // 初始化数据结构
+        at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)
+        at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12
+]]>
+</failure>
+</testcase>
+<testcase name="网站管理功能 › 删除网站" classname="main/database-unit.spec.ts" time="0.017">
+<failure message="database-unit.spec.ts:170:7 删除网站" type="FAILURE">
+<![CDATA[  [electron-main] › main/database-unit.spec.ts:170:7 › 网站管理功能 › 删除网站 ───────────────────────────────
+
+    TypeError: Cannot read properties of undefined (reading 'getPath')
+
+       at ../../src/main/database/FileDatabase.ts:22
+
+      20 |   constructor() {
+      21 |     // 获取用户数据目录
+    > 22 |     const userDataPath = app.getPath('userData');
+         |                              ^
+      23 |     this.dataPath = path.join(userDataPath, 'cuizijin-trap-data.json');
+      24 |     
+      25 |     // 初始化数据结构
+        at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)
+        at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12
+]]>
+</failure>
+</testcase>
+<testcase name="数据验证 › 验证标题长度限制" classname="main/database-unit.spec.ts" time="0.018">
+<failure message="database-unit.spec.ts:186:7 验证标题长度限制" type="FAILURE">
+<![CDATA[  [electron-main] › main/database-unit.spec.ts:186:7 › 数据验证 › 验证标题长度限制 ─────────────────────────────
+
+    TypeError: Cannot read properties of undefined (reading 'getPath')
+
+       at ../../src/main/database/FileDatabase.ts:22
+
+      20 |   constructor() {
+      21 |     // 获取用户数据目录
+    > 22 |     const userDataPath = app.getPath('userData');
+         |                              ^
+      23 |     this.dataPath = path.join(userDataPath, 'cuizijin-trap-data.json');
+      24 |     
+      25 |     // 初始化数据结构
+        at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)
+        at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12
+]]>
+</failure>
+</testcase>
+<testcase name="数据验证 › 验证描述长度限制" classname="main/database-unit.spec.ts" time="0.012">
+<failure message="database-unit.spec.ts:197:7 验证描述长度限制" type="FAILURE">
+<![CDATA[  [electron-main] › main/database-unit.spec.ts:197:7 › 数据验证 › 验证描述长度限制 ─────────────────────────────
+
+    TypeError: Cannot read properties of undefined (reading 'getPath')
+
+       at ../../src/main/database/FileDatabase.ts:22
+
+      20 |   constructor() {
+      21 |     // 获取用户数据目录
+    > 22 |     const userDataPath = app.getPath('userData');
+         |                              ^
+      23 |     this.dataPath = path.join(userDataPath, 'cuizijin-trap-data.json');
+      24 |     
+      25 |     // 初始化数据结构
+        at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)
+        at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12
+]]>
+</failure>
+</testcase>
+<testcase name="数据验证 › 验证分类长度限制" classname="main/database-unit.spec.ts" time="0.01">
+<failure message="database-unit.spec.ts:208:7 验证分类长度限制" type="FAILURE">
+<![CDATA[  [electron-main] › main/database-unit.spec.ts:208:7 › 数据验证 › 验证分类长度限制 ─────────────────────────────
+
+    TypeError: Cannot read properties of undefined (reading 'getPath')
+
+       at ../../src/main/database/FileDatabase.ts:22
+
+      20 |   constructor() {
+      21 |     // 获取用户数据目录
+    > 22 |     const userDataPath = app.getPath('userData');
+         |                              ^
+      23 |     this.dataPath = path.join(userDataPath, 'cuizijin-trap-data.json');
+      24 |     
+      25 |     // 初始化数据结构
+        at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)
+        at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12
+]]>
+</failure>
+</testcase>
+<testcase name="数据验证 › 验证空URL" classname="main/database-unit.spec.ts" time="0.017">
+<failure message="database-unit.spec.ts:219:7 验证空URL" type="FAILURE">
+<![CDATA[  [electron-main] › main/database-unit.spec.ts:219:7 › 数据验证 › 验证空URL ───────────────────────────────
+
+    TypeError: Cannot read properties of undefined (reading 'getPath')
+
+       at ../../src/main/database/FileDatabase.ts:22
+
+      20 |   constructor() {
+      21 |     // 获取用户数据目录
+    > 22 |     const userDataPath = app.getPath('userData');
+         |                              ^
+      23 |     this.dataPath = path.join(userDataPath, 'cuizijin-trap-data.json');
+      24 |     
+      25 |     // 初始化数据结构
+        at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)
+        at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12
+]]>
+</failure>
+</testcase>
+<testcase name="数据验证 › 验证无效域名" classname="main/database-unit.spec.ts" time="0.021">
+<failure message="database-unit.spec.ts:229:7 验证无效域名" type="FAILURE">
+<![CDATA[  [electron-main] › main/database-unit.spec.ts:229:7 › 数据验证 › 验证无效域名 ───────────────────────────────
+
+    TypeError: Cannot read properties of undefined (reading 'getPath')
+
+       at ../../src/main/database/FileDatabase.ts:22
+
+      20 |   constructor() {
+      21 |     // 获取用户数据目录
+    > 22 |     const userDataPath = app.getPath('userData');
+         |                              ^
+      23 |     this.dataPath = path.join(userDataPath, 'cuizijin-trap-data.json');
+      24 |     
+      25 |     // 初始化数据结构
+        at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)
+        at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12
+]]>
+</failure>
+</testcase>
+<testcase name="操作日志 › 记录成功操作" classname="main/database-unit.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="操作日志 › 记录失败操作" classname="main/database-unit.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="操作日志 › 日志分页" classname="main/database-unit.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="网站检查功能 › 检查被阻止的网站" classname="main/database-unit.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="网站检查功能 › 检查未被阻止的网站" classname="main/database-unit.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="网站检查功能 › 检查禁用的网站" classname="main/database-unit.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="网站检查功能 › 获取被阻止的域名列表" classname="main/database-unit.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="renderer/ui-components.spec.ts" timestamp="2025-07-05T03:02:50.915Z" hostname="electron-renderer" tests="10" failures="0" skipped="10" time="0" errors="0">
+<testcase name="Electron渲染进程 - UI组件测试 › 登录界面组件应该正确渲染" classname="renderer/ui-components.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Electron渲染进程 - UI组件测试 › 按钮组件应该响应用户交互" classname="renderer/ui-components.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Electron渲染进程 - UI组件测试 › 输入组件应该正确处理用户输入" classname="renderer/ui-components.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Electron渲染进程 - UI组件测试 › 模态框组件应该正确显示和隐藏" classname="renderer/ui-components.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Electron渲染进程 - UI组件测试 › 开关组件应该正确切换状态" classname="renderer/ui-components.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Electron渲染进程 - UI组件测试 › 加载状态组件应该正确显示" classname="renderer/ui-components.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Electron渲染进程 - UI组件测试 › 表单验证应该正确工作" classname="renderer/ui-components.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Electron渲染进程 - UI组件测试 › 主题切换应该正确工作" classname="renderer/ui-components.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Electron渲染进程 - UI组件测试 › 响应式设计应该在不同屏幕尺寸下正常工作" classname="renderer/ui-components.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Electron渲染进程 - UI组件测试 › 键盘导航应该正确工作" classname="renderer/ui-components.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="e2e/initial-setup.spec.ts" timestamp="2025-07-05T03:02:50.915Z" hostname="electron-e2e" tests="9" failures="0" skipped="9" time="0" errors="0">
+<testcase name="初始设置流程测试 › 应该正确显示初始设置页面" classname="e2e/initial-setup.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="初始设置流程测试 › 应该能够完成初始密码设置" classname="e2e/initial-setup.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="初始设置流程测试 › 应该验证密码确认匹配" classname="e2e/initial-setup.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="初始设置流程测试 › 应该要求密码满足最小长度" classname="e2e/initial-setup.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="初始设置流程测试 › 应该在设置完成后能够正常登录" classname="e2e/initial-setup.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="初始设置流程测试 › 应该正确处理键盘导航" classname="e2e/initial-setup.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="初始设置流程测试 › 应该显示密码强度指示器（如果有）" classname="e2e/initial-setup.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="初始设置流程测试 › 应该支持密码可见性切换（如果有）" classname="e2e/initial-setup.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="初始设置流程测试 › 应该在页面刷新后保持设置状态" classname="e2e/initial-setup.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="e2e/user-flows.spec.ts" timestamp="2025-07-05T03:02:50.915Z" hostname="electron-e2e" tests="8" failures="0" skipped="8" time="0" errors="0">
+<testcase name="Electron端到端测试 - 用户流程 › 完整的用户登录流程" classname="e2e/user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Electron端到端测试 - 用户流程 › 网站管理完整流程" classname="e2e/user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Electron端到端测试 - 用户流程 › 代理服务器控制流程" classname="e2e/user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Electron端到端测试 - 用户流程 › 安全功能测试流程" classname="e2e/user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Electron端到端测试 - 用户流程 › 系统集成功能测试" classname="e2e/user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Electron端到端测试 - 用户流程 › 应用设置和配置流程" classname="e2e/user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Electron端到端测试 - 用户流程 › 错误处理和恢复流程" classname="e2e/user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Electron端到端测试 - 用户流程 › 数据持久化验证" classname="e2e/user-flows.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="e2e/website-blocking.spec.ts" timestamp="2025-07-05T03:02:50.915Z" hostname="electron-e2e" tests="7" failures="0" skipped="7" time="0" errors="0">
+<testcase name="网站拦截功能测试 › 应该能够添加和管理拦截网站" classname="e2e/website-blocking.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="网站拦截功能测试 › 应该能够启用和禁用网站拦截" classname="e2e/website-blocking.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="网站拦截功能测试 › 应该能够批量操作网站" classname="e2e/website-blocking.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="网站拦截功能测试 › 应该能够按分类筛选网站" classname="e2e/website-blocking.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="网站拦截功能测试 › 应该能够搜索和排序网站" classname="e2e/website-blocking.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="网站拦截功能测试 › 应该能够导入和导出网站列表" classname="e2e/website-blocking.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="网站拦截功能测试 › 应该正确显示网站统计信息" classname="e2e/website-blocking.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+</testsuites>

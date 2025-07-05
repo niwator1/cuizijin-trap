@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>崔子瑾诱捕器</title>
+  <style>
+    /* 初始加载样式 */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      overflow: hidden;
+    }
+
+    #loading {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      z-index: 9999;
+    }
+
+    .loading-spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid rgba(255, 255, 255, 0.3);
+      border-top: 3px solid white;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin-bottom: 20px;
+    }
+
+    .loading-text {
+      font-size: 16px;
+      font-weight: 500;
+      opacity: 0.9;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* 隐藏加载界面 */
+    .loading-hidden {
+      opacity: 0;
+      transition: opacity 0.3s ease-out;
+      pointer-events: none;
+    }
+
+    /* 应用根容器 */
+    #root {
+      width: 100%;
+      height: 100vh;
+      opacity: 0;
+      transition: opacity 0.3s ease-in;
+    }
+
+    #root.loaded {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <!-- 加载界面 -->
+  <div id="loading">
+    <div class="loading-spinner"></div>
+    <div class="loading-text">正在启动崔子瑾诱捕器...</div>
+  </div>
+
+  <!-- React应用根节点 -->
+  <div id="root"></div>
+
+  <!-- 应用脚本 -->
+  <script type="module" src="./index.tsx"></script>
+
+  <script>
+    // 应用加载完成后隐藏加载界面
+    window.addEventListener('DOMContentLoaded', () => {
+      // 模拟加载时间，实际应用中可以监听React应用的加载状态
+      setTimeout(() => {
+        const loading = document.getElementById('loading');
+        const root = document.getElementById('root');
+        
+        if (loading && root) {
+          loading.classList.add('loading-hidden');
+          root.classList.add('loaded');
+          
+          // 完全隐藏加载界面
+          setTimeout(() => {
+            loading.style.display = 'none';
+          }, 300);
+        }
+      }, 1500);
+    });
+
+    // 错误处理
+    window.addEventListener('error', (event) => {
+      console.error('Application error:', event.error);
+    });
+
+    window.addEventListener('unhandledrejection', (event) => {
+      console.error('Unhandled promise rejection:', event.reason);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,2278 @@
+{
+  "config": {
+    "configFile": "/Users/zhouyi/Documents/augment-projects/website_version2/playwright-electron.config.ts",
+    "rootDir": "/Users/zhouyi/Documents/augment-projects/website_version2/tests/electron",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "/Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/global-setup.ts",
+    "globalTeardown": "/Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/global-teardown.ts",
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report-electron"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results-electron.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "test-results-electron.xml"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/Users/zhouyi/Documents/augment-projects/website_version2/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "electron-main",
+        "name": "electron-main",
+        "testDir": "/Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/Users/zhouyi/Documents/augment-projects/website_version2/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "electron-renderer",
+        "name": "electron-renderer",
+        "testDir": "/Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/renderer",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/Users/zhouyi/Documents/augment-projects/website_version2/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "electron-e2e",
+        "name": "electron-e2e",
+        "testDir": "/Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.53.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "main/app-lifecycle.spec.ts",
+      "file": "main/app-lifecycle.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Electron主进程 - 应用生命周期",
+          "file": "main/app-lifecycle.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "应用应该正常启动和关闭",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-main",
+                  "projectName": "electron-main",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4826,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-05T03:02:51.683Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e3fbd05762d625c4cc33-8bc9094ddb0d98eac8b5",
+              "file": "main/app-lifecycle.spec.ts",
+              "line": 6,
+              "column": 7
+            },
+            {
+              "title": "应用应该创建系统托盘",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-main",
+                  "projectName": "electron-main",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5333,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-05T03:02:56.519Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e3fbd05762d625c4cc33-c9f7c5b487aa6e64517b",
+              "file": "main/app-lifecycle.spec.ts",
+              "line": 39,
+              "column": 7
+            },
+            {
+              "title": "应用应该处理多个窗口",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-main",
+                  "projectName": "electron-main",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4946,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-05T03:03:01.856Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e3fbd05762d625c4cc33-88b6fd4572a1ab6bdc17",
+              "file": "main/app-lifecycle.spec.ts",
+              "line": 63,
+              "column": 7
+            },
+            {
+              "title": "应用应该正确处理深度链接",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-main",
+                  "projectName": "electron-main",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4940,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-05T03:03:06.806Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e3fbd05762d625c4cc33-cfc988b3b5b8a18212cb",
+              "file": "main/app-lifecycle.spec.ts",
+              "line": 83,
+              "column": 7
+            },
+            {
+              "title": "应用应该正确设置安全策略",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-main",
+                  "projectName": "electron-main",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4842,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-05T03:03:11.748Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e3fbd05762d625c4cc33-daa2bb013feabd0ac104",
+              "file": "main/app-lifecycle.spec.ts",
+              "line": 104,
+              "column": 7
+            },
+            {
+              "title": "应用应该正确处理未捕获的异常",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-main",
+                  "projectName": "electron-main",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 7072,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-05T03:03:16.593Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e3fbd05762d625c4cc33-4e380215c05311352548",
+              "file": "main/app-lifecycle.spec.ts",
+              "line": 136,
+              "column": 7
+            },
+            {
+              "title": "应用应该正确管理内存使用",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-main",
+                  "projectName": "electron-main",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2062,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-05T03:03:23.674Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e3fbd05762d625c4cc33-9b52e08c424511623571",
+              "file": "main/app-lifecycle.spec.ts",
+              "line": 170,
+              "column": 7
+            },
+            {
+              "title": "应用应该正确处理权限请求",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-main",
+                  "projectName": "electron-main",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5897,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-05T03:03:25.738Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e3fbd05762d625c4cc33-45735ed8c66e5e7e1c07",
+              "file": "main/app-lifecycle.spec.ts",
+              "line": 199,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "main/database-unit.spec.ts",
+      "file": "main/database-unit.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "FileDatabase 初始化",
+          "file": "main/database-unit.spec.ts",
+          "line": 38,
+          "column": 6,
+          "specs": [
+            {
+              "title": "应该创建默认数据结构",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-main",
+                  "projectName": "electron-main",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 7,
+                      "error": {
+                        "message": "TypeError: Cannot read properties of undefined (reading 'getPath')",
+                        "stack": "TypeError: Cannot read properties of undefined (reading 'getPath')\n    at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)\n    at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12",
+                        "location": {
+                          "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                          "column": 30,
+                          "line": 22
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m../../src/main/database/FileDatabase.ts:22\n\n\u001b[0m \u001b[90m 20 |\u001b[39m   constructor() {\n \u001b[90m 21 |\u001b[39m     \u001b[90m// 获取用户数据目录\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mconst\u001b[39m userDataPath \u001b[33m=\u001b[39m app\u001b[33m.\u001b[39mgetPath(\u001b[32m'userData'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mdataPath \u001b[33m=\u001b[39m path\u001b[33m.\u001b[39mjoin(userDataPath\u001b[33m,\u001b[39m \u001b[32m'cuizijin-trap-data.json'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \n \u001b[90m 25 |\u001b[39m     \u001b[90m// 初始化数据结构\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                            "column": 30,
+                            "line": 22
+                          },
+                          "message": "TypeError: Cannot read properties of undefined (reading 'getPath')\n\n\u001b[90m   at \u001b[39m../../src/main/database/FileDatabase.ts:22\n\n\u001b[0m \u001b[90m 20 |\u001b[39m   constructor() {\n \u001b[90m 21 |\u001b[39m     \u001b[90m// 获取用户数据目录\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mconst\u001b[39m userDataPath \u001b[33m=\u001b[39m app\u001b[33m.\u001b[39mgetPath(\u001b[32m'userData'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mdataPath \u001b[33m=\u001b[39m path\u001b[33m.\u001b[39mjoin(userDataPath\u001b[33m,\u001b[39m \u001b[32m'cuizijin-trap-data.json'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \n \u001b[90m 25 |\u001b[39m     \u001b[90m// 初始化数据结构\u001b[39m\u001b[0m\n\u001b[2m    at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)\u001b[22m\n\u001b[2m    at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-05T03:03:31.660Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                        "column": 30,
+                        "line": 22
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "01e8baf7eee5b384c7e1-308111fc95fd946be595",
+              "file": "main/database-unit.spec.ts",
+              "line": 39,
+              "column": 7
+            },
+            {
+              "title": "应该创建数据文件",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-main",
+                  "projectName": "electron-main",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 12,
+                      "error": {
+                        "message": "TypeError: Cannot read properties of undefined (reading 'getPath')",
+                        "stack": "TypeError: Cannot read properties of undefined (reading 'getPath')\n    at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)\n    at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12",
+                        "location": {
+                          "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                          "column": 30,
+                          "line": 22
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m../../src/main/database/FileDatabase.ts:22\n\n\u001b[0m \u001b[90m 20 |\u001b[39m   constructor() {\n \u001b[90m 21 |\u001b[39m     \u001b[90m// 获取用户数据目录\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mconst\u001b[39m userDataPath \u001b[33m=\u001b[39m app\u001b[33m.\u001b[39mgetPath(\u001b[32m'userData'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mdataPath \u001b[33m=\u001b[39m path\u001b[33m.\u001b[39mjoin(userDataPath\u001b[33m,\u001b[39m \u001b[32m'cuizijin-trap-data.json'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \n \u001b[90m 25 |\u001b[39m     \u001b[90m// 初始化数据结构\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                            "column": 30,
+                            "line": 22
+                          },
+                          "message": "TypeError: Cannot read properties of undefined (reading 'getPath')\n\n\u001b[90m   at \u001b[39m../../src/main/database/FileDatabase.ts:22\n\n\u001b[0m \u001b[90m 20 |\u001b[39m   constructor() {\n \u001b[90m 21 |\u001b[39m     \u001b[90m// 获取用户数据目录\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mconst\u001b[39m userDataPath \u001b[33m=\u001b[39m app\u001b[33m.\u001b[39mgetPath(\u001b[32m'userData'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mdataPath \u001b[33m=\u001b[39m path\u001b[33m.\u001b[39mjoin(userDataPath\u001b[33m,\u001b[39m \u001b[32m'cuizijin-trap-data.json'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \n \u001b[90m 25 |\u001b[39m     \u001b[90m// 初始化数据结构\u001b[39m\u001b[0m\n\u001b[2m    at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)\u001b[22m\n\u001b[2m    at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-05T03:03:32.492Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                        "column": 30,
+                        "line": 22
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "01e8baf7eee5b384c7e1-84eb0a1f16bd8b385cfb",
+              "file": "main/database-unit.spec.ts",
+              "line": 48,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "网站管理功能",
+          "file": "main/database-unit.spec.ts",
+          "line": 54,
+          "column": 6,
+          "specs": [
+            {
+              "title": "添加有效网站",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-main",
+                  "projectName": "electron-main",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 14,
+                      "error": {
+                        "message": "TypeError: Cannot read properties of undefined (reading 'getPath')",
+                        "stack": "TypeError: Cannot read properties of undefined (reading 'getPath')\n    at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)\n    at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12",
+                        "location": {
+                          "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                          "column": 30,
+                          "line": 22
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m../../src/main/database/FileDatabase.ts:22\n\n\u001b[0m \u001b[90m 20 |\u001b[39m   constructor() {\n \u001b[90m 21 |\u001b[39m     \u001b[90m// 获取用户数据目录\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mconst\u001b[39m userDataPath \u001b[33m=\u001b[39m app\u001b[33m.\u001b[39mgetPath(\u001b[32m'userData'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mdataPath \u001b[33m=\u001b[39m path\u001b[33m.\u001b[39mjoin(userDataPath\u001b[33m,\u001b[39m \u001b[32m'cuizijin-trap-data.json'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \n \u001b[90m 25 |\u001b[39m     \u001b[90m// 初始化数据结构\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                            "column": 30,
+                            "line": 22
+                          },
+                          "message": "TypeError: Cannot read properties of undefined (reading 'getPath')\n\n\u001b[90m   at \u001b[39m../../src/main/database/FileDatabase.ts:22\n\n\u001b[0m \u001b[90m 20 |\u001b[39m   constructor() {\n \u001b[90m 21 |\u001b[39m     \u001b[90m// 获取用户数据目录\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mconst\u001b[39m userDataPath \u001b[33m=\u001b[39m app\u001b[33m.\u001b[39mgetPath(\u001b[32m'userData'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mdataPath \u001b[33m=\u001b[39m path\u001b[33m.\u001b[39mjoin(userDataPath\u001b[33m,\u001b[39m \u001b[32m'cuizijin-trap-data.json'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \n \u001b[90m 25 |\u001b[39m     \u001b[90m// 初始化数据结构\u001b[39m\u001b[0m\n\u001b[2m    at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)\u001b[22m\n\u001b[2m    at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-05T03:03:33.502Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                        "column": 30,
+                        "line": 22
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "01e8baf7eee5b384c7e1-71358dabf0691222f87e",
+              "file": "main/database-unit.spec.ts",
+              "line": 55,
+              "column": 7
+            },
+            {
+              "title": "添加无效URL应该失败",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-main",
+                  "projectName": "electron-main",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 21,
+                      "error": {
+                        "message": "TypeError: Cannot read properties of undefined (reading 'getPath')",
+                        "stack": "TypeError: Cannot read properties of undefined (reading 'getPath')\n    at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)\n    at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12",
+                        "location": {
+                          "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                          "column": 30,
+                          "line": 22
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m../../src/main/database/FileDatabase.ts:22\n\n\u001b[0m \u001b[90m 20 |\u001b[39m   constructor() {\n \u001b[90m 21 |\u001b[39m     \u001b[90m// 获取用户数据目录\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mconst\u001b[39m userDataPath \u001b[33m=\u001b[39m app\u001b[33m.\u001b[39mgetPath(\u001b[32m'userData'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mdataPath \u001b[33m=\u001b[39m path\u001b[33m.\u001b[39mjoin(userDataPath\u001b[33m,\u001b[39m \u001b[32m'cuizijin-trap-data.json'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \n \u001b[90m 25 |\u001b[39m     \u001b[90m// 初始化数据结构\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                            "column": 30,
+                            "line": 22
+                          },
+                          "message": "TypeError: Cannot read properties of undefined (reading 'getPath')\n\n\u001b[90m   at \u001b[39m../../src/main/database/FileDatabase.ts:22\n\n\u001b[0m \u001b[90m 20 |\u001b[39m   constructor() {\n \u001b[90m 21 |\u001b[39m     \u001b[90m// 获取用户数据目录\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mconst\u001b[39m userDataPath \u001b[33m=\u001b[39m app\u001b[33m.\u001b[39mgetPath(\u001b[32m'userData'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mdataPath \u001b[33m=\u001b[39m path\u001b[33m.\u001b[39mjoin(userDataPath\u001b[33m,\u001b[39m \u001b[32m'cuizijin-trap-data.json'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \n \u001b[90m 25 |\u001b[39m     \u001b[90m// 初始化数据结构\u001b[39m\u001b[0m\n\u001b[2m    at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)\u001b[22m\n\u001b[2m    at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-05T03:03:34.476Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                        "column": 30,
+                        "line": 22
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "01e8baf7eee5b384c7e1-2e372c5ddec3003ebec6",
+              "file": "main/database-unit.spec.ts",
+              "line": 72,
+              "column": 7
+            },
+            {
+              "title": "添加重复网站应该失败",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-main",
+                  "projectName": "electron-main",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 16,
+                      "error": {
+                        "message": "TypeError: Cannot read properties of undefined (reading 'getPath')",
+                        "stack": "TypeError: Cannot read properties of undefined (reading 'getPath')\n    at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)\n    at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12",
+                        "location": {
+                          "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                          "column": 30,
+                          "line": 22
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m../../src/main/database/FileDatabase.ts:22\n\n\u001b[0m \u001b[90m 20 |\u001b[39m   constructor() {\n \u001b[90m 21 |\u001b[39m     \u001b[90m// 获取用户数据目录\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mconst\u001b[39m userDataPath \u001b[33m=\u001b[39m app\u001b[33m.\u001b[39mgetPath(\u001b[32m'userData'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mdataPath \u001b[33m=\u001b[39m path\u001b[33m.\u001b[39mjoin(userDataPath\u001b[33m,\u001b[39m \u001b[32m'cuizijin-trap-data.json'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \n \u001b[90m 25 |\u001b[39m     \u001b[90m// 初始化数据结构\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                            "column": 30,
+                            "line": 22
+                          },
+                          "message": "TypeError: Cannot read properties of undefined (reading 'getPath')\n\n\u001b[90m   at \u001b[39m../../src/main/database/FileDatabase.ts:22\n\n\u001b[0m \u001b[90m 20 |\u001b[39m   constructor() {\n \u001b[90m 21 |\u001b[39m     \u001b[90m// 获取用户数据目录\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mconst\u001b[39m userDataPath \u001b[33m=\u001b[39m app\u001b[33m.\u001b[39mgetPath(\u001b[32m'userData'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mdataPath \u001b[33m=\u001b[39m path\u001b[33m.\u001b[39mjoin(userDataPath\u001b[33m,\u001b[39m \u001b[32m'cuizijin-trap-data.json'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \n \u001b[90m 25 |\u001b[39m     \u001b[90m// 初始化数据结构\u001b[39m\u001b[0m\n\u001b[2m    at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)\u001b[22m\n\u001b[2m    at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-05T03:03:35.441Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                        "column": 30,
+                        "line": 22
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "01e8baf7eee5b384c7e1-36521b5907b7af456228",
+              "file": "main/database-unit.spec.ts",
+              "line": 84,
+              "column": 7
+            },
+            {
+              "title": "获取网站列表",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-main",
+                  "projectName": "electron-main",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 17,
+                      "error": {
+                        "message": "TypeError: Cannot read properties of undefined (reading 'getPath')",
+                        "stack": "TypeError: Cannot read properties of undefined (reading 'getPath')\n    at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)\n    at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12",
+                        "location": {
+                          "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                          "column": 30,
+                          "line": 22
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m../../src/main/database/FileDatabase.ts:22\n\n\u001b[0m \u001b[90m 20 |\u001b[39m   constructor() {\n \u001b[90m 21 |\u001b[39m     \u001b[90m// 获取用户数据目录\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mconst\u001b[39m userDataPath \u001b[33m=\u001b[39m app\u001b[33m.\u001b[39mgetPath(\u001b[32m'userData'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mdataPath \u001b[33m=\u001b[39m path\u001b[33m.\u001b[39mjoin(userDataPath\u001b[33m,\u001b[39m \u001b[32m'cuizijin-trap-data.json'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \n \u001b[90m 25 |\u001b[39m     \u001b[90m// 初始化数据结构\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                            "column": 30,
+                            "line": 22
+                          },
+                          "message": "TypeError: Cannot read properties of undefined (reading 'getPath')\n\n\u001b[90m   at \u001b[39m../../src/main/database/FileDatabase.ts:22\n\n\u001b[0m \u001b[90m 20 |\u001b[39m   constructor() {\n \u001b[90m 21 |\u001b[39m     \u001b[90m// 获取用户数据目录\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mconst\u001b[39m userDataPath \u001b[33m=\u001b[39m app\u001b[33m.\u001b[39mgetPath(\u001b[32m'userData'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mdataPath \u001b[33m=\u001b[39m path\u001b[33m.\u001b[39mjoin(userDataPath\u001b[33m,\u001b[39m \u001b[32m'cuizijin-trap-data.json'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \n \u001b[90m 25 |\u001b[39m     \u001b[90m// 初始化数据结构\u001b[39m\u001b[0m\n\u001b[2m    at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)\u001b[22m\n\u001b[2m    at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-05T03:03:36.352Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                        "column": 30,
+                        "line": 22
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "01e8baf7eee5b384c7e1-e1dc6aaa5517b926c21f",
+              "file": "main/database-unit.spec.ts",
+              "line": 100,
+              "column": 7
+            },
+            {
+              "title": "过滤启用的网站",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-main",
+                  "projectName": "electron-main",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 18,
+                      "error": {
+                        "message": "TypeError: Cannot read properties of undefined (reading 'getPath')",
+                        "stack": "TypeError: Cannot read properties of undefined (reading 'getPath')\n    at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)\n    at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12",
+                        "location": {
+                          "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                          "column": 30,
+                          "line": 22
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m../../src/main/database/FileDatabase.ts:22\n\n\u001b[0m \u001b[90m 20 |\u001b[39m   constructor() {\n \u001b[90m 21 |\u001b[39m     \u001b[90m// 获取用户数据目录\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mconst\u001b[39m userDataPath \u001b[33m=\u001b[39m app\u001b[33m.\u001b[39mgetPath(\u001b[32m'userData'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mdataPath \u001b[33m=\u001b[39m path\u001b[33m.\u001b[39mjoin(userDataPath\u001b[33m,\u001b[39m \u001b[32m'cuizijin-trap-data.json'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \n \u001b[90m 25 |\u001b[39m     \u001b[90m// 初始化数据结构\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                            "column": 30,
+                            "line": 22
+                          },
+                          "message": "TypeError: Cannot read properties of undefined (reading 'getPath')\n\n\u001b[90m   at \u001b[39m../../src/main/database/FileDatabase.ts:22\n\n\u001b[0m \u001b[90m 20 |\u001b[39m   constructor() {\n \u001b[90m 21 |\u001b[39m     \u001b[90m// 获取用户数据目录\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mconst\u001b[39m userDataPath \u001b[33m=\u001b[39m app\u001b[33m.\u001b[39mgetPath(\u001b[32m'userData'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mdataPath \u001b[33m=\u001b[39m path\u001b[33m.\u001b[39mjoin(userDataPath\u001b[33m,\u001b[39m \u001b[32m'cuizijin-trap-data.json'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \n \u001b[90m 25 |\u001b[39m     \u001b[90m// 初始化数据结构\u001b[39m\u001b[0m\n\u001b[2m    at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)\u001b[22m\n\u001b[2m    at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-05T03:03:37.302Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                        "column": 30,
+                        "line": 22
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "01e8baf7eee5b384c7e1-0e19fe53245e56e8b53d",
+              "file": "main/database-unit.spec.ts",
+              "line": 118,
+              "column": 7
+            },
+            {
+              "title": "搜索网站",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-main",
+                  "projectName": "electron-main",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 15,
+                      "error": {
+                        "message": "TypeError: Cannot read properties of undefined (reading 'getPath')",
+                        "stack": "TypeError: Cannot read properties of undefined (reading 'getPath')\n    at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)\n    at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12",
+                        "location": {
+                          "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                          "column": 30,
+                          "line": 22
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m../../src/main/database/FileDatabase.ts:22\n\n\u001b[0m \u001b[90m 20 |\u001b[39m   constructor() {\n \u001b[90m 21 |\u001b[39m     \u001b[90m// 获取用户数据目录\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mconst\u001b[39m userDataPath \u001b[33m=\u001b[39m app\u001b[33m.\u001b[39mgetPath(\u001b[32m'userData'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mdataPath \u001b[33m=\u001b[39m path\u001b[33m.\u001b[39mjoin(userDataPath\u001b[33m,\u001b[39m \u001b[32m'cuizijin-trap-data.json'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \n \u001b[90m 25 |\u001b[39m     \u001b[90m// 初始化数据结构\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                            "column": 30,
+                            "line": 22
+                          },
+                          "message": "TypeError: Cannot read properties of undefined (reading 'getPath')\n\n\u001b[90m   at \u001b[39m../../src/main/database/FileDatabase.ts:22\n\n\u001b[0m \u001b[90m 20 |\u001b[39m   constructor() {\n \u001b[90m 21 |\u001b[39m     \u001b[90m// 获取用户数据目录\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mconst\u001b[39m userDataPath \u001b[33m=\u001b[39m app\u001b[33m.\u001b[39mgetPath(\u001b[32m'userData'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mdataPath \u001b[33m=\u001b[39m path\u001b[33m.\u001b[39mjoin(userDataPath\u001b[33m,\u001b[39m \u001b[32m'cuizijin-trap-data.json'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \n \u001b[90m 25 |\u001b[39m     \u001b[90m// 初始化数据结构\u001b[39m\u001b[0m\n\u001b[2m    at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)\u001b[22m\n\u001b[2m    at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-05T03:03:38.379Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                        "column": 30,
+                        "line": 22
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "01e8baf7eee5b384c7e1-cf1cc105b949e51a0182",
+              "file": "main/database-unit.spec.ts",
+              "line": 135,
+              "column": 7
+            },
+            {
+              "title": "更新网站信息",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-main",
+                  "projectName": "electron-main",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 15,
+                      "error": {
+                        "message": "TypeError: Cannot read properties of undefined (reading 'getPath')",
+                        "stack": "TypeError: Cannot read properties of undefined (reading 'getPath')\n    at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)\n    at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12",
+                        "location": {
+                          "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                          "column": 30,
+                          "line": 22
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m../../src/main/database/FileDatabase.ts:22\n\n\u001b[0m \u001b[90m 20 |\u001b[39m   constructor() {\n \u001b[90m 21 |\u001b[39m     \u001b[90m// 获取用户数据目录\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mconst\u001b[39m userDataPath \u001b[33m=\u001b[39m app\u001b[33m.\u001b[39mgetPath(\u001b[32m'userData'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mdataPath \u001b[33m=\u001b[39m path\u001b[33m.\u001b[39mjoin(userDataPath\u001b[33m,\u001b[39m \u001b[32m'cuizijin-trap-data.json'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \n \u001b[90m 25 |\u001b[39m     \u001b[90m// 初始化数据结构\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                            "column": 30,
+                            "line": 22
+                          },
+                          "message": "TypeError: Cannot read properties of undefined (reading 'getPath')\n\n\u001b[90m   at \u001b[39m../../src/main/database/FileDatabase.ts:22\n\n\u001b[0m \u001b[90m 20 |\u001b[39m   constructor() {\n \u001b[90m 21 |\u001b[39m     \u001b[90m// 获取用户数据目录\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mconst\u001b[39m userDataPath \u001b[33m=\u001b[39m app\u001b[33m.\u001b[39mgetPath(\u001b[32m'userData'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mdataPath \u001b[33m=\u001b[39m path\u001b[33m.\u001b[39mjoin(userDataPath\u001b[33m,\u001b[39m \u001b[32m'cuizijin-trap-data.json'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \n \u001b[90m 25 |\u001b[39m     \u001b[90m// 初始化数据结构\u001b[39m\u001b[0m\n\u001b[2m    at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)\u001b[22m\n\u001b[2m    at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-05T03:03:39.481Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                        "column": 30,
+                        "line": 22
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "01e8baf7eee5b384c7e1-d07891ca43a3c617e782",
+              "file": "main/database-unit.spec.ts",
+              "line": 146,
+              "column": 7
+            },
+            {
+              "title": "切换网站状态",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-main",
+                  "projectName": "electron-main",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 17,
+                      "error": {
+                        "message": "TypeError: Cannot read properties of undefined (reading 'getPath')",
+                        "stack": "TypeError: Cannot read properties of undefined (reading 'getPath')\n    at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)\n    at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12",
+                        "location": {
+                          "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                          "column": 30,
+                          "line": 22
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m../../src/main/database/FileDatabase.ts:22\n\n\u001b[0m \u001b[90m 20 |\u001b[39m   constructor() {\n \u001b[90m 21 |\u001b[39m     \u001b[90m// 获取用户数据目录\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mconst\u001b[39m userDataPath \u001b[33m=\u001b[39m app\u001b[33m.\u001b[39mgetPath(\u001b[32m'userData'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mdataPath \u001b[33m=\u001b[39m path\u001b[33m.\u001b[39mjoin(userDataPath\u001b[33m,\u001b[39m \u001b[32m'cuizijin-trap-data.json'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \n \u001b[90m 25 |\u001b[39m     \u001b[90m// 初始化数据结构\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                            "column": 30,
+                            "line": 22
+                          },
+                          "message": "TypeError: Cannot read properties of undefined (reading 'getPath')\n\n\u001b[90m   at \u001b[39m../../src/main/database/FileDatabase.ts:22\n\n\u001b[0m \u001b[90m 20 |\u001b[39m   constructor() {\n \u001b[90m 21 |\u001b[39m     \u001b[90m// 获取用户数据目录\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mconst\u001b[39m userDataPath \u001b[33m=\u001b[39m app\u001b[33m.\u001b[39mgetPath(\u001b[32m'userData'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mdataPath \u001b[33m=\u001b[39m path\u001b[33m.\u001b[39mjoin(userDataPath\u001b[33m,\u001b[39m \u001b[32m'cuizijin-trap-data.json'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \n \u001b[90m 25 |\u001b[39m     \u001b[90m// 初始化数据结构\u001b[39m\u001b[0m\n\u001b[2m    at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)\u001b[22m\n\u001b[2m    at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-05T03:03:40.431Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                        "column": 30,
+                        "line": 22
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "01e8baf7eee5b384c7e1-51177feaa69e6d20ed34",
+              "file": "main/database-unit.spec.ts",
+              "line": 160,
+              "column": 7
+            },
+            {
+              "title": "删除网站",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-main",
+                  "projectName": "electron-main",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 17,
+                      "error": {
+                        "message": "TypeError: Cannot read properties of undefined (reading 'getPath')",
+                        "stack": "TypeError: Cannot read properties of undefined (reading 'getPath')\n    at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)\n    at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12",
+                        "location": {
+                          "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                          "column": 30,
+                          "line": 22
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m../../src/main/database/FileDatabase.ts:22\n\n\u001b[0m \u001b[90m 20 |\u001b[39m   constructor() {\n \u001b[90m 21 |\u001b[39m     \u001b[90m// 获取用户数据目录\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mconst\u001b[39m userDataPath \u001b[33m=\u001b[39m app\u001b[33m.\u001b[39mgetPath(\u001b[32m'userData'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mdataPath \u001b[33m=\u001b[39m path\u001b[33m.\u001b[39mjoin(userDataPath\u001b[33m,\u001b[39m \u001b[32m'cuizijin-trap-data.json'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \n \u001b[90m 25 |\u001b[39m     \u001b[90m// 初始化数据结构\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                            "column": 30,
+                            "line": 22
+                          },
+                          "message": "TypeError: Cannot read properties of undefined (reading 'getPath')\n\n\u001b[90m   at \u001b[39m../../src/main/database/FileDatabase.ts:22\n\n\u001b[0m \u001b[90m 20 |\u001b[39m   constructor() {\n \u001b[90m 21 |\u001b[39m     \u001b[90m// 获取用户数据目录\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mconst\u001b[39m userDataPath \u001b[33m=\u001b[39m app\u001b[33m.\u001b[39mgetPath(\u001b[32m'userData'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mdataPath \u001b[33m=\u001b[39m path\u001b[33m.\u001b[39mjoin(userDataPath\u001b[33m,\u001b[39m \u001b[32m'cuizijin-trap-data.json'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \n \u001b[90m 25 |\u001b[39m     \u001b[90m// 初始化数据结构\u001b[39m\u001b[0m\n\u001b[2m    at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)\u001b[22m\n\u001b[2m    at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-05T03:03:41.327Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                        "column": 30,
+                        "line": 22
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "01e8baf7eee5b384c7e1-2557321666072060ea1b",
+              "file": "main/database-unit.spec.ts",
+              "line": 170,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "数据验证",
+          "file": "main/database-unit.spec.ts",
+          "line": 185,
+          "column": 6,
+          "specs": [
+            {
+              "title": "验证标题长度限制",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-main",
+                  "projectName": "electron-main",
+                  "results": [
+                    {
+                      "workerIndex": 11,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 18,
+                      "error": {
+                        "message": "TypeError: Cannot read properties of undefined (reading 'getPath')",
+                        "stack": "TypeError: Cannot read properties of undefined (reading 'getPath')\n    at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)\n    at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12",
+                        "location": {
+                          "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                          "column": 30,
+                          "line": 22
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m../../src/main/database/FileDatabase.ts:22\n\n\u001b[0m \u001b[90m 20 |\u001b[39m   constructor() {\n \u001b[90m 21 |\u001b[39m     \u001b[90m// 获取用户数据目录\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mconst\u001b[39m userDataPath \u001b[33m=\u001b[39m app\u001b[33m.\u001b[39mgetPath(\u001b[32m'userData'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mdataPath \u001b[33m=\u001b[39m path\u001b[33m.\u001b[39mjoin(userDataPath\u001b[33m,\u001b[39m \u001b[32m'cuizijin-trap-data.json'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \n \u001b[90m 25 |\u001b[39m     \u001b[90m// 初始化数据结构\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                            "column": 30,
+                            "line": 22
+                          },
+                          "message": "TypeError: Cannot read properties of undefined (reading 'getPath')\n\n\u001b[90m   at \u001b[39m../../src/main/database/FileDatabase.ts:22\n\n\u001b[0m \u001b[90m 20 |\u001b[39m   constructor() {\n \u001b[90m 21 |\u001b[39m     \u001b[90m// 获取用户数据目录\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mconst\u001b[39m userDataPath \u001b[33m=\u001b[39m app\u001b[33m.\u001b[39mgetPath(\u001b[32m'userData'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mdataPath \u001b[33m=\u001b[39m path\u001b[33m.\u001b[39mjoin(userDataPath\u001b[33m,\u001b[39m \u001b[32m'cuizijin-trap-data.json'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \n \u001b[90m 25 |\u001b[39m     \u001b[90m// 初始化数据结构\u001b[39m\u001b[0m\n\u001b[2m    at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)\u001b[22m\n\u001b[2m    at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-05T03:03:42.277Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                        "column": 30,
+                        "line": 22
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "01e8baf7eee5b384c7e1-d66a8d2b1734cc838ac5",
+              "file": "main/database-unit.spec.ts",
+              "line": 186,
+              "column": 7
+            },
+            {
+              "title": "验证描述长度限制",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-main",
+                  "projectName": "electron-main",
+                  "results": [
+                    {
+                      "workerIndex": 12,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 12,
+                      "error": {
+                        "message": "TypeError: Cannot read properties of undefined (reading 'getPath')",
+                        "stack": "TypeError: Cannot read properties of undefined (reading 'getPath')\n    at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)\n    at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12",
+                        "location": {
+                          "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                          "column": 30,
+                          "line": 22
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m../../src/main/database/FileDatabase.ts:22\n\n\u001b[0m \u001b[90m 20 |\u001b[39m   constructor() {\n \u001b[90m 21 |\u001b[39m     \u001b[90m// 获取用户数据目录\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mconst\u001b[39m userDataPath \u001b[33m=\u001b[39m app\u001b[33m.\u001b[39mgetPath(\u001b[32m'userData'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mdataPath \u001b[33m=\u001b[39m path\u001b[33m.\u001b[39mjoin(userDataPath\u001b[33m,\u001b[39m \u001b[32m'cuizijin-trap-data.json'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \n \u001b[90m 25 |\u001b[39m     \u001b[90m// 初始化数据结构\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                            "column": 30,
+                            "line": 22
+                          },
+                          "message": "TypeError: Cannot read properties of undefined (reading 'getPath')\n\n\u001b[90m   at \u001b[39m../../src/main/database/FileDatabase.ts:22\n\n\u001b[0m \u001b[90m 20 |\u001b[39m   constructor() {\n \u001b[90m 21 |\u001b[39m     \u001b[90m// 获取用户数据目录\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mconst\u001b[39m userDataPath \u001b[33m=\u001b[39m app\u001b[33m.\u001b[39mgetPath(\u001b[32m'userData'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mdataPath \u001b[33m=\u001b[39m path\u001b[33m.\u001b[39mjoin(userDataPath\u001b[33m,\u001b[39m \u001b[32m'cuizijin-trap-data.json'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \n \u001b[90m 25 |\u001b[39m     \u001b[90m// 初始化数据结构\u001b[39m\u001b[0m\n\u001b[2m    at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)\u001b[22m\n\u001b[2m    at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-05T03:03:43.201Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                        "column": 30,
+                        "line": 22
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "01e8baf7eee5b384c7e1-ccef9d24596c3f223831",
+              "file": "main/database-unit.spec.ts",
+              "line": 197,
+              "column": 7
+            },
+            {
+              "title": "验证分类长度限制",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-main",
+                  "projectName": "electron-main",
+                  "results": [
+                    {
+                      "workerIndex": 13,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 10,
+                      "error": {
+                        "message": "TypeError: Cannot read properties of undefined (reading 'getPath')",
+                        "stack": "TypeError: Cannot read properties of undefined (reading 'getPath')\n    at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)\n    at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12",
+                        "location": {
+                          "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                          "column": 30,
+                          "line": 22
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m../../src/main/database/FileDatabase.ts:22\n\n\u001b[0m \u001b[90m 20 |\u001b[39m   constructor() {\n \u001b[90m 21 |\u001b[39m     \u001b[90m// 获取用户数据目录\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mconst\u001b[39m userDataPath \u001b[33m=\u001b[39m app\u001b[33m.\u001b[39mgetPath(\u001b[32m'userData'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mdataPath \u001b[33m=\u001b[39m path\u001b[33m.\u001b[39mjoin(userDataPath\u001b[33m,\u001b[39m \u001b[32m'cuizijin-trap-data.json'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \n \u001b[90m 25 |\u001b[39m     \u001b[90m// 初始化数据结构\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                            "column": 30,
+                            "line": 22
+                          },
+                          "message": "TypeError: Cannot read properties of undefined (reading 'getPath')\n\n\u001b[90m   at \u001b[39m../../src/main/database/FileDatabase.ts:22\n\n\u001b[0m \u001b[90m 20 |\u001b[39m   constructor() {\n \u001b[90m 21 |\u001b[39m     \u001b[90m// 获取用户数据目录\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mconst\u001b[39m userDataPath \u001b[33m=\u001b[39m app\u001b[33m.\u001b[39mgetPath(\u001b[32m'userData'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mdataPath \u001b[33m=\u001b[39m path\u001b[33m.\u001b[39mjoin(userDataPath\u001b[33m,\u001b[39m \u001b[32m'cuizijin-trap-data.json'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \n \u001b[90m 25 |\u001b[39m     \u001b[90m// 初始化数据结构\u001b[39m\u001b[0m\n\u001b[2m    at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)\u001b[22m\n\u001b[2m    at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-05T03:03:43.992Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                        "column": 30,
+                        "line": 22
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "01e8baf7eee5b384c7e1-a7766033954febf86368",
+              "file": "main/database-unit.spec.ts",
+              "line": 208,
+              "column": 7
+            },
+            {
+              "title": "验证空URL",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-main",
+                  "projectName": "electron-main",
+                  "results": [
+                    {
+                      "workerIndex": 14,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 17,
+                      "error": {
+                        "message": "TypeError: Cannot read properties of undefined (reading 'getPath')",
+                        "stack": "TypeError: Cannot read properties of undefined (reading 'getPath')\n    at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)\n    at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12",
+                        "location": {
+                          "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                          "column": 30,
+                          "line": 22
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m../../src/main/database/FileDatabase.ts:22\n\n\u001b[0m \u001b[90m 20 |\u001b[39m   constructor() {\n \u001b[90m 21 |\u001b[39m     \u001b[90m// 获取用户数据目录\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mconst\u001b[39m userDataPath \u001b[33m=\u001b[39m app\u001b[33m.\u001b[39mgetPath(\u001b[32m'userData'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mdataPath \u001b[33m=\u001b[39m path\u001b[33m.\u001b[39mjoin(userDataPath\u001b[33m,\u001b[39m \u001b[32m'cuizijin-trap-data.json'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \n \u001b[90m 25 |\u001b[39m     \u001b[90m// 初始化数据结构\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                            "column": 30,
+                            "line": 22
+                          },
+                          "message": "TypeError: Cannot read properties of undefined (reading 'getPath')\n\n\u001b[90m   at \u001b[39m../../src/main/database/FileDatabase.ts:22\n\n\u001b[0m \u001b[90m 20 |\u001b[39m   constructor() {\n \u001b[90m 21 |\u001b[39m     \u001b[90m// 获取用户数据目录\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mconst\u001b[39m userDataPath \u001b[33m=\u001b[39m app\u001b[33m.\u001b[39mgetPath(\u001b[32m'userData'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mdataPath \u001b[33m=\u001b[39m path\u001b[33m.\u001b[39mjoin(userDataPath\u001b[33m,\u001b[39m \u001b[32m'cuizijin-trap-data.json'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \n \u001b[90m 25 |\u001b[39m     \u001b[90m// 初始化数据结构\u001b[39m\u001b[0m\n\u001b[2m    at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)\u001b[22m\n\u001b[2m    at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-05T03:03:44.995Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                        "column": 30,
+                        "line": 22
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "01e8baf7eee5b384c7e1-2f006874064717f8918e",
+              "file": "main/database-unit.spec.ts",
+              "line": 219,
+              "column": 7
+            },
+            {
+              "title": "验证无效域名",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-main",
+                  "projectName": "electron-main",
+                  "results": [
+                    {
+                      "workerIndex": 15,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 21,
+                      "error": {
+                        "message": "TypeError: Cannot read properties of undefined (reading 'getPath')",
+                        "stack": "TypeError: Cannot read properties of undefined (reading 'getPath')\n    at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)\n    at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12",
+                        "location": {
+                          "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                          "column": 30,
+                          "line": 22
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m../../src/main/database/FileDatabase.ts:22\n\n\u001b[0m \u001b[90m 20 |\u001b[39m   constructor() {\n \u001b[90m 21 |\u001b[39m     \u001b[90m// 获取用户数据目录\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mconst\u001b[39m userDataPath \u001b[33m=\u001b[39m app\u001b[33m.\u001b[39mgetPath(\u001b[32m'userData'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mdataPath \u001b[33m=\u001b[39m path\u001b[33m.\u001b[39mjoin(userDataPath\u001b[33m,\u001b[39m \u001b[32m'cuizijin-trap-data.json'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \n \u001b[90m 25 |\u001b[39m     \u001b[90m// 初始化数据结构\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                            "column": 30,
+                            "line": 22
+                          },
+                          "message": "TypeError: Cannot read properties of undefined (reading 'getPath')\n\n\u001b[90m   at \u001b[39m../../src/main/database/FileDatabase.ts:22\n\n\u001b[0m \u001b[90m 20 |\u001b[39m   constructor() {\n \u001b[90m 21 |\u001b[39m     \u001b[90m// 获取用户数据目录\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mconst\u001b[39m userDataPath \u001b[33m=\u001b[39m app\u001b[33m.\u001b[39mgetPath(\u001b[32m'userData'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mdataPath \u001b[33m=\u001b[39m path\u001b[33m.\u001b[39mjoin(userDataPath\u001b[33m,\u001b[39m \u001b[32m'cuizijin-trap-data.json'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \n \u001b[90m 25 |\u001b[39m     \u001b[90m// 初始化数据结构\u001b[39m\u001b[0m\n\u001b[2m    at FileDatabase (/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts:22:30)\u001b[22m\n\u001b[2m    at /Users/zhouyi/Documents/augment-projects/website_version2/tests/electron/main/database-unit.spec.ts:28:12\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-05T03:03:46.037Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/zhouyi/Documents/augment-projects/website_version2/src/main/database/FileDatabase.ts",
+                        "column": 30,
+                        "line": 22
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "01e8baf7eee5b384c7e1-5c7a2641cccb54ee6bee",
+              "file": "main/database-unit.spec.ts",
+              "line": 229,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "操作日志",
+          "file": "main/database-unit.spec.ts",
+          "line": 240,
+          "column": 6,
+          "specs": [
+            {
+              "title": "记录成功操作",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-main",
+                  "projectName": "electron-main",
+                  "results": [
+                    {
+                      "workerIndex": 16,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-05T03:03:47.517Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "01e8baf7eee5b384c7e1-6cad41448ca33c5bf663",
+              "file": "main/database-unit.spec.ts",
+              "line": 241,
+              "column": 7
+            },
+            {
+              "title": "记录失败操作",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-main",
+                  "projectName": "electron-main",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "01e8baf7eee5b384c7e1-9aeaf8fe976937eb63dd",
+              "file": "main/database-unit.spec.ts",
+              "line": 255,
+              "column": 7
+            },
+            {
+              "title": "日志分页",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-main",
+                  "projectName": "electron-main",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "01e8baf7eee5b384c7e1-98a8fe2cc9008e3ad6d3",
+              "file": "main/database-unit.spec.ts",
+              "line": 267,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "网站检查功能",
+          "file": "main/database-unit.spec.ts",
+          "line": 283,
+          "column": 6,
+          "specs": [
+            {
+              "title": "检查被阻止的网站",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-main",
+                  "projectName": "electron-main",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "01e8baf7eee5b384c7e1-44daa22c5609e3b04347",
+              "file": "main/database-unit.spec.ts",
+              "line": 284,
+              "column": 7
+            },
+            {
+              "title": "检查未被阻止的网站",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-main",
+                  "projectName": "electron-main",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "01e8baf7eee5b384c7e1-b9e8f0c00e8d5ecbad7c",
+              "file": "main/database-unit.spec.ts",
+              "line": 292,
+              "column": 7
+            },
+            {
+              "title": "检查禁用的网站",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-main",
+                  "projectName": "electron-main",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "01e8baf7eee5b384c7e1-17d992c01f378b60686c",
+              "file": "main/database-unit.spec.ts",
+              "line": 298,
+              "column": 7
+            },
+            {
+              "title": "获取被阻止的域名列表",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-main",
+                  "projectName": "electron-main",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "01e8baf7eee5b384c7e1-68cbbca111af4625be84",
+              "file": "main/database-unit.spec.ts",
+              "line": 306,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "renderer/ui-components.spec.ts",
+      "file": "renderer/ui-components.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Electron渲染进程 - UI组件测试",
+          "file": "renderer/ui-components.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "登录界面组件应该正确渲染",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-renderer",
+                  "projectName": "electron-renderer",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ff675a35eb2076990d40-0d3b81b44041aac14ec6",
+              "file": "renderer/ui-components.spec.ts",
+              "line": 24,
+              "column": 7
+            },
+            {
+              "title": "按钮组件应该响应用户交互",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-renderer",
+                  "projectName": "electron-renderer",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ff675a35eb2076990d40-6d8db8f3547157ab62b1",
+              "file": "renderer/ui-components.spec.ts",
+              "line": 44,
+              "column": 7
+            },
+            {
+              "title": "输入组件应该正确处理用户输入",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-renderer",
+                  "projectName": "electron-renderer",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ff675a35eb2076990d40-7ad79b6485b881bf7c7d",
+              "file": "renderer/ui-components.spec.ts",
+              "line": 63,
+              "column": 7
+            },
+            {
+              "title": "模态框组件应该正确显示和隐藏",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-renderer",
+                  "projectName": "electron-renderer",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ff675a35eb2076990d40-a482860312f44ef5d31f",
+              "file": "renderer/ui-components.spec.ts",
+              "line": 88,
+              "column": 7
+            },
+            {
+              "title": "开关组件应该正确切换状态",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-renderer",
+                  "projectName": "electron-renderer",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ff675a35eb2076990d40-2ebfe8e3d13d53a28c5c",
+              "file": "renderer/ui-components.spec.ts",
+              "line": 116,
+              "column": 7
+            },
+            {
+              "title": "加载状态组件应该正确显示",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-renderer",
+                  "projectName": "electron-renderer",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ff675a35eb2076990d40-273c355c8220d4803237",
+              "file": "renderer/ui-components.spec.ts",
+              "line": 140,
+              "column": 7
+            },
+            {
+              "title": "表单验证应该正确工作",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-renderer",
+                  "projectName": "electron-renderer",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ff675a35eb2076990d40-037d46a4cedcc8f9d8a1",
+              "file": "renderer/ui-components.spec.ts",
+              "line": 156,
+              "column": 7
+            },
+            {
+              "title": "主题切换应该正确工作",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-renderer",
+                  "projectName": "electron-renderer",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ff675a35eb2076990d40-7fba7374c28f6128a855",
+              "file": "renderer/ui-components.spec.ts",
+              "line": 182,
+              "column": 7
+            },
+            {
+              "title": "响应式设计应该在不同屏幕尺寸下正常工作",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-renderer",
+                  "projectName": "electron-renderer",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ff675a35eb2076990d40-2ac8efd61c6bf4add78d",
+              "file": "renderer/ui-components.spec.ts",
+              "line": 206,
+              "column": 7
+            },
+            {
+              "title": "键盘导航应该正确工作",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-renderer",
+                  "projectName": "electron-renderer",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ff675a35eb2076990d40-9ec5c5700e7ce59cdd05",
+              "file": "renderer/ui-components.spec.ts",
+              "line": 235,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "e2e/initial-setup.spec.ts",
+      "file": "e2e/initial-setup.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "初始设置流程测试",
+          "file": "e2e/initial-setup.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "应该正确显示初始设置页面",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-e2e",
+                  "projectName": "electron-e2e",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "6d55069fc0b083aac7bd-e32ca65706cf26e74b18",
+              "file": "e2e/initial-setup.spec.ts",
+              "line": 25,
+              "column": 7
+            },
+            {
+              "title": "应该能够完成初始密码设置",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-e2e",
+                  "projectName": "electron-e2e",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "6d55069fc0b083aac7bd-f6d9c9f093fe907ca07b",
+              "file": "e2e/initial-setup.spec.ts",
+              "line": 40,
+              "column": 7
+            },
+            {
+              "title": "应该验证密码确认匹配",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-e2e",
+                  "projectName": "electron-e2e",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "6d55069fc0b083aac7bd-75d841c8bf24d6071c7c",
+              "file": "e2e/initial-setup.spec.ts",
+              "line": 63,
+              "column": 7
+            },
+            {
+              "title": "应该要求密码满足最小长度",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-e2e",
+                  "projectName": "electron-e2e",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "6d55069fc0b083aac7bd-9384684c9c5b2f1388cb",
+              "file": "e2e/initial-setup.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "应该在设置完成后能够正常登录",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-e2e",
+                  "projectName": "electron-e2e",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "6d55069fc0b083aac7bd-9d2342fe2fafe0119f1f",
+              "file": "e2e/initial-setup.spec.ts",
+              "line": 100,
+              "column": 7
+            },
+            {
+              "title": "应该正确处理键盘导航",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-e2e",
+                  "projectName": "electron-e2e",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "6d55069fc0b083aac7bd-368f5db7896b8ca75a6b",
+              "file": "e2e/initial-setup.spec.ts",
+              "line": 138,
+              "column": 7
+            },
+            {
+              "title": "应该显示密码强度指示器（如果有）",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-e2e",
+                  "projectName": "electron-e2e",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "6d55069fc0b083aac7bd-920fbdb9c9169b09c486",
+              "file": "e2e/initial-setup.spec.ts",
+              "line": 161,
+              "column": 7
+            },
+            {
+              "title": "应该支持密码可见性切换（如果有）",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-e2e",
+                  "projectName": "electron-e2e",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "6d55069fc0b083aac7bd-23d747e6bc481c7a5109",
+              "file": "e2e/initial-setup.spec.ts",
+              "line": 186,
+              "column": 7
+            },
+            {
+              "title": "应该在页面刷新后保持设置状态",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-e2e",
+                  "projectName": "electron-e2e",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "6d55069fc0b083aac7bd-fdafb6c8aacb2e458ba0",
+              "file": "e2e/initial-setup.spec.ts",
+              "line": 214,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "e2e/user-flows.spec.ts",
+      "file": "e2e/user-flows.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Electron端到端测试 - 用户流程",
+          "file": "e2e/user-flows.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "完整的用户登录流程",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-e2e",
+                  "projectName": "electron-e2e",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "6e3ebd64b08dc3aea496-45ce2be93787456d1666",
+              "file": "e2e/user-flows.spec.ts",
+              "line": 25,
+              "column": 7
+            },
+            {
+              "title": "网站管理完整流程",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-e2e",
+                  "projectName": "electron-e2e",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "6e3ebd64b08dc3aea496-b5cf5e2ae3fe52f731a0",
+              "file": "e2e/user-flows.spec.ts",
+              "line": 49,
+              "column": 7
+            },
+            {
+              "title": "代理服务器控制流程",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-e2e",
+                  "projectName": "electron-e2e",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "6e3ebd64b08dc3aea496-380f3ea49b52540d0b0f",
+              "file": "e2e/user-flows.spec.ts",
+              "line": 108,
+              "column": 7
+            },
+            {
+              "title": "安全功能测试流程",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-e2e",
+                  "projectName": "electron-e2e",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "6e3ebd64b08dc3aea496-e24c75c83f47daa2ad17",
+              "file": "e2e/user-flows.spec.ts",
+              "line": 145,
+              "column": 7
+            },
+            {
+              "title": "系统集成功能测试",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-e2e",
+                  "projectName": "electron-e2e",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "6e3ebd64b08dc3aea496-652d0f0ea9bfe30f5c34",
+              "file": "e2e/user-flows.spec.ts",
+              "line": 183,
+              "column": 7
+            },
+            {
+              "title": "应用设置和配置流程",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-e2e",
+                  "projectName": "electron-e2e",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "6e3ebd64b08dc3aea496-bd1755212fcb50553934",
+              "file": "e2e/user-flows.spec.ts",
+              "line": 215,
+              "column": 7
+            },
+            {
+              "title": "错误处理和恢复流程",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-e2e",
+                  "projectName": "electron-e2e",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "6e3ebd64b08dc3aea496-6a4595d8d3f57ae08264",
+              "file": "e2e/user-flows.spec.ts",
+              "line": 256,
+              "column": 7
+            },
+            {
+              "title": "数据持久化验证",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-e2e",
+                  "projectName": "electron-e2e",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "6e3ebd64b08dc3aea496-3a4c44aa630372238a93",
+              "file": "e2e/user-flows.spec.ts",
+              "line": 295,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "e2e/website-blocking.spec.ts",
+      "file": "e2e/website-blocking.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "网站拦截功能测试",
+          "file": "e2e/website-blocking.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "应该能够添加和管理拦截网站",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-e2e",
+                  "projectName": "electron-e2e",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "58d36516fe8242316fe8-2389ba20452b3f9d8d80",
+              "file": "e2e/website-blocking.spec.ts",
+              "line": 30,
+              "column": 7
+            },
+            {
+              "title": "应该能够启用和禁用网站拦截",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-e2e",
+                  "projectName": "electron-e2e",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "58d36516fe8242316fe8-91f5a56e5260de8cfc06",
+              "file": "e2e/website-blocking.spec.ts",
+              "line": 65,
+              "column": 7
+            },
+            {
+              "title": "应该能够批量操作网站",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-e2e",
+                  "projectName": "electron-e2e",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "58d36516fe8242316fe8-ae2ebdee8b2c3e80780d",
+              "file": "e2e/website-blocking.spec.ts",
+              "line": 93,
+              "column": 7
+            },
+            {
+              "title": "应该能够按分类筛选网站",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-e2e",
+                  "projectName": "electron-e2e",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "58d36516fe8242316fe8-b253b515f4078eb4cfeb",
+              "file": "e2e/website-blocking.spec.ts",
+              "line": 141,
+              "column": 7
+            },
+            {
+              "title": "应该能够搜索和排序网站",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-e2e",
+                  "projectName": "electron-e2e",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "58d36516fe8242316fe8-e3e01eea0d2517fc96b3",
+              "file": "e2e/website-blocking.spec.ts",
+              "line": 170,
+              "column": 7
+            },
+            {
+              "title": "应该能够导入和导出网站列表",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-e2e",
+                  "projectName": "electron-e2e",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "58d36516fe8242316fe8-19497efff5550ad39dc2",
+              "file": "e2e/website-blocking.spec.ts",
+              "line": 219,
+              "column": 7
+            },
+            {
+              "title": "应该正确显示网站统计信息",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron-e2e",
+                  "projectName": "electron-e2e",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "58d36516fe8242316fe8-8e31c84a96533d819153",
+              "file": "e2e/website-blocking.spec.ts",
+              "line": 272,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-07-05T03:02:37.097Z",
+    "duration": 75448.338,
+    "expected": 8,
+    "skipped": 41,
+    "unexpected": 16,
+    "flaky": 0
+  }
+}

@@ -1,0 +1,183 @@
+name: Build and Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Release version'
+        required: true
+        default: 'v1.0.0'
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    
+    strategy:
+      matrix:
+        os: [macos-latest, windows-latest, ubuntu-latest]
+        
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Generate icons (if script exists)
+      run: npm run generate:icons || echo "Icon generation script not found, skipping..."
+      continue-on-error: true
+      
+    - name: Build application
+      run: npm run build
+      
+    - name: Build for macOS
+      if: matrix.os == 'macos-latest'
+      run: npm run dist:mac
+      env:
+        CSC_IDENTITY_AUTO_DISCOVERY: false
+        
+    - name: Build for Windows
+      if: matrix.os == 'windows-latest'
+      run: npm run dist:win
+      
+    - name: Build for Linux
+      if: matrix.os == 'ubuntu-latest'
+      run: npm run dist:linux
+      
+    - name: Upload macOS artifacts
+      if: matrix.os == 'macos-latest'
+      uses: actions/upload-artifact@v4
+      with:
+        name: macos-build
+        path: |
+          release/*.dmg
+          release/*.zip
+          release/mac/
+        retention-days: 30
+        
+    - name: Upload Windows artifacts
+      if: matrix.os == 'windows-latest'
+      uses: actions/upload-artifact@v4
+      with:
+        name: windows-build
+        path: |
+          release/*.exe
+          release/win-unpacked/
+        retention-days: 30
+        
+    - name: Upload Linux artifacts
+      if: matrix.os == 'ubuntu-latest'
+      uses: actions/upload-artifact@v4
+      with:
+        name: linux-build
+        path: |
+          release/*.AppImage
+          release/*.deb
+          release/*.rpm
+          release/linux-unpacked/
+        retention-days: 30
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/') || github.event_name == 'workflow_dispatch'
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Download all artifacts
+      uses: actions/download-artifact@v4
+      with:
+        path: artifacts
+        
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.event.inputs.version || github.ref_name }}
+        release_name: 崔子瑾诱捕器 ${{ github.event.inputs.version || github.ref_name }}
+        body: |
+          ## 崔子瑾诱捕器 - 网站访问控制应用
+          
+          ### 🚀 新功能
+          - 网站访问控制和拦截
+          - 进程保护和自动重启
+          - 密码保护退出机制
+          - 跨平台支持 (Windows/macOS/Linux)
+          
+          ### 📦 安装说明
+          
+          **Windows:**
+          - 下载 `.exe` 安装程序
+          - 以管理员身份运行安装
+          - 支持开机自启动和进程保护
+          
+          **macOS:**
+          - 下载 `.dmg` 文件
+          - 拖拽到应用程序文件夹
+          - 可能需要在系统偏好设置中允许运行
+          
+          **Linux:**
+          - 下载 `.AppImage` 文件
+          - 添加执行权限：`chmod +x *.AppImage`
+          - 直接运行，无需安装
+          
+          ### ⚠️ 重要提醒
+          - Windows 版本需要管理员权限才能启用完整功能
+          - 请妥善保管管理员密码，这是退出应用的唯一方式
+          - 生产环境下会启用进程保护功能
+          
+          ### 🔒 安全特性
+          - ✅ 看门狗进程监控
+          - ✅ 自动重启机制  
+          - ✅ 密码保护退出
+          - ✅ 开机自启动
+          - ✅ 防火墙规则配置
+          - ✅ 进程隐藏保护
+        draft: false
+        prerelease: false
+        
+    - name: Upload Windows installer
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: artifacts/windows-build/*.exe
+        asset_name: cuizijin-trap-windows-installer.exe
+        asset_content_type: application/octet-stream
+      continue-on-error: true
+        
+    - name: Upload macOS installer
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: artifacts/macos-build/*.dmg
+        asset_name: cuizijin-trap-macos-installer.dmg
+        asset_content_type: application/octet-stream
+      continue-on-error: true
+        
+    - name: Upload Linux AppImage
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: artifacts/linux-build/*.AppImage
+        asset_name: cuizijin-trap-linux.AppImage
+        asset_content_type: application/octet-stream
+      continue-on-error: true
