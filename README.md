@@ -1,165 +1,77 @@
-# 崔子瑾诱捕器 - 网站访问控制应用
+# 崔子瑾诱捕器 🛡️
 
-一个基于Electron的桌面应用程序，用于控制和管理网站访问，具有苹果风格的现代化界面设计。
+[![Build Status](https://github.com/niwator1/cuizijin-trap/workflows/Build%20and%20Release/badge.svg)](https://github.com/niwator1/cuizijin-trap/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)](https://github.com/niwator1/cuizijin-trap/releases)
 
-## 📋 项目概述
+一个强大的网站访问控制应用，基于 Electron + React + TypeScript 构建，支持跨平台部署。
 
-**崔子瑾诱捕器**是一个私人使用的网站访问控制应用，通过系统级代理服务实现可靠的网站拦截功能。应用采用现代化的技术栈，提供直观易用的用户界面。
+## ✨ 主要功能
 
-### 核心功能
-- 🔐 **身份验证系统** - 启动时密码验证保护
-- 📝 **网站黑名单管理** - 添加、删除、管理被禁止的网站
-- 🔄 **访问控制开关** - 每个网站独立的启用/禁用控制
-- 🚨 **一键重置功能** - 紧急情况下快速解除所有限制
-- 💾 **持久化存储** - 设置在应用重启后保持有效
-- 🛡️ **可靠拦截机制** - 基于代理服务器的网站拦截（非hosts文件）
+- 🚫 **网站访问控制** - 精确控制可访问的网站列表
+- 🔒 **进程保护** - 防止应用被恶意关闭，支持自动重启
+- 🔐 **密码保护** - 退出应用需要输入正确的管理员密码
+- 🌍 **跨平台支持** - Windows、macOS、Linux 全平台支持
+- 🚀 **开机自启** - 系统启动时自动运行
+- 👁️ **隐藏保护** - 生产环境下隐藏进程，增强安全性
 
-## 🛠️ 技术栈
+## 📦 快速安装
 
-### 前端
-- **Electron** - 跨平台桌面应用框架
-- **React 18** - 用户界面库
-- **TypeScript** - 类型安全的JavaScript
-- **Tailwind CSS** - 实用优先的CSS框架
-- **Framer Motion** - 动画库
-- **Zustand** - 轻量级状态管理
+### 下载预构建版本
+前往 [Releases](https://github.com/niwator1/cuizijin-trap/releases) 页面下载适合您系统的安装包：
 
-### 后端
-- **Node.js** - JavaScript运行时
-- **SQLite** - 轻量级数据库
-- **HTTP代理服务器** - 网站拦截核心
-- **bcrypt** - 密码加密
-- **node-forge** - 证书生成和管理
+- **Windows**: `cuizijin-trap-windows-installer.exe`
+- **macOS**: `cuizijin-trap-macos-installer.dmg`
+- **Linux**: `cuizijin-trap-linux.AppImage`
 
-## 📁 项目结构
+### 从源码构建
 
-```
-崔子瑾诱捕器/
-├── docs/                    # 项目文档
-│   ├── 应用设计文档.md
-│   ├── 技术规格文档.md
-│   └── 开发指南.md
-├── src/
-│   ├── main/               # Electron主进程
-│   │   ├── index.ts       # 主进程入口
-│   │   ├── app/           # 应用控制
-│   │   ├── proxy/         # 代理服务
-│   │   ├── database/      # 数据库操作
-│   │   ├── security/      # 安全模块
-│   │   └── system/        # 系统集成
-│   ├── renderer/          # React渲染进程
-│   │   ├── index.tsx     # 渲染进程入口
-│   │   ├── App.tsx       # 根组件
-│   │   ├── pages/        # 页面组件
-│   │   ├── components/   # 通用组件
-│   │   ├── store/        # 状态管理
-│   │   └── styles/       # 样式文件
-│   └── shared/           # 共享代码
-│       ├── types/        # TypeScript类型
-│       ├── constants/    # 常量定义
-│       └── utils/        # 工具函数
-├── assets/               # 静态资源
-├── scripts/             # 构建脚本
-└── dist/               # 构建输出
-```
-
-## 🚀 开发进度
-
-### ✅ 已完成
-- [x] **项目文档** - 完整的设计文档和技术规格
-- [x] **项目初始化** - Electron + React + TypeScript项目结构
-- [x] **开发环境配置** - Webpack、Vite、ESLint、Prettier等工具配置
-- [x] **基础架构** - 共享类型、常量、工具函数
-- [x] **主进程框架** - Electron主进程入口和基础结构
-- [x] **渲染进程框架** - React应用入口和路由配置
-- [x] **状态管理** - Zustand store配置
-- [x] **样式系统** - Tailwind CSS配置和苹果风格样式
-
-### 🔄 进行中
-- [ ] **数据库设计与实现** - SQLite数据库结构和数据访问层
-
-### 📋 待完成
-- [ ] **身份验证系统** - 密码验证、会话管理
-- [ ] **网站管理功能** - 黑名单CRUD操作、开关控制
-- [ ] **网络代理服务** - HTTP/HTTPS代理服务器实现
-- [ ] **系统集成** - 系统代理设置、证书安装
-- [ ] **UI界面开发** - 苹果风格用户界面实现
-- [ ] **安全机制实现** - 防绕过机制、进程保护
-- [ ] **测试与优化** - 功能测试、性能优化
-
-## 🔧 开发环境要求
-
-- **Node.js** 18.0+
-- **npm** 8.0+ 或 **yarn** 1.22+
-- **Git** 2.30+
-- **VS Code** (推荐)
-
-## 📦 安装和运行
-
-### 1. 安装依赖
 ```bash
+# 克隆仓库
+git clone https://github.com/niwator1/cuizijin-trap.git
+cd cuizijin-trap
+
+# 安装依赖
 npm install
-```
 
-### 2. 开发模式
-```bash
+# 启动开发服务器
 npm run dev
-```
 
-### 3. 构建应用
-```bash
+# 构建应用
 npm run build
+
+# 打包应用
+npm run dist:win    # Windows
+npm run dist:mac    # macOS
+npm run dist:linux  # Linux
 ```
-
-### 4. 打包应用
-```bash
-npm run dist
-```
-
-## 🎨 设计特色
-
-### 苹果风格设计
-- 现代化的圆角和阴影效果
-- 流畅的动画和过渡
-- 直观的交互反馈
-- 响应式布局设计
-
-### 用户体验
-- 简洁明了的界面布局
-- 一键操作的便捷功能
-- 实时状态反馈
-- 错误处理和用户提示
 
 ## 🔒 安全特性
 
-### 网络拦截
-- 系统级HTTP/HTTPS代理
-- 自签名证书管理
-- 域名精确匹配
-- 实时拦截统计
+- ✅ **看门狗服务** - 独立进程监控主应用状态
+- ✅ **自动重启** - 进程异常退出时自动重启
+- ✅ **密码保护** - 退出应用需要管理员密码验证
+- ✅ **进程隐藏** - 生产环境下隐藏进程
+- ✅ **系统集成** - 开机自启动和防火墙配置
 
-### 防绕过机制
-- 系统代理监控
-- 进程保护机制
-- 配置文件加密
-- 绕过检测系统
+## 🛠️ 技术栈
 
-## 📚 文档
+- **前端**: React 18 + TypeScript + Tailwind CSS + Framer Motion
+- **后端**: Electron + Node.js + SQLite
+- **构建**: Webpack + Vite + electron-builder
+- **测试**: Playwright + Jest
+- **CI/CD**: GitHub Actions
 
-详细的开发文档请参考：
-- [应用设计文档](docs/应用设计文档.md)
-- [技术规格文档](docs/技术规格文档.md)
-- [开发指南](docs/开发指南.md)
+## 📖 文档
 
-## 🤝 开发计划
+- [📋 GitHub部署指南](docs/GitHub部署指南.md)
+- [🔧 开发指南](docs/开发指南.md)
+- [🐛 故障排除](docs/故障排除.md)
+- [📝 更新日志](CHANGELOG.md)
 
-项目采用敏捷开发方式，分为以下阶段：
+## 🤝 贡献
 
-1. **第一阶段** (已完成) - 项目搭建和基础架构
-2. **第二阶段** (进行中) - 核心功能开发
-3. **第三阶段** - 网络拦截功能实现
-4. **第四阶段** - 安全机制和UI优化
-5. **第五阶段** - 测试和发布准备
+欢迎贡献代码！请查看 [贡献指南](CONTRIBUTING.md) 了解详情。
 
 ## 📄 许可证
 
@@ -167,6 +79,4 @@ MIT License - 详见 [LICENSE](LICENSE) 文件
 
 ---
 
-**开发状态**: 🔄 开发中  
-**当前版本**: v1.0.0-alpha  
-**最后更新**: 2025-06-28
+**⚠️ 重要提醒**: 本应用仅用于合法的网站访问控制目的，请遵守当地法律法规。
