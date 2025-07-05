@@ -1,8 +1,8 @@
 {
   "name": "cuizijin-trap",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "崔子瑾诱捕器 - 网站访问控制应用",
-  "main": "main/index.js",
+  "main": "dist/main/index.js",
   "homepage": "./",
   "author": "开发团队",
   "license": "MIT",

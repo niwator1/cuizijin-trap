@@ -6,10 +6,11 @@
 
 我们已经为您准备好了以下文件：
 
-- **Windows版本**: `release/cuizijin-trap-windows-v1.0.1-fixed.zip` (约 106MB)
+- **Windows版本**: `release/cuizijin-trap-windows-v1.0.2-with-icon.zip` (约 106MB)
   - 包含完整的Windows可执行程序
   - 解压后可直接运行 `崔子瑾诱捕器.exe`
   - **已修复**: 解决了JavaScript模块加载错误问题
+  - **新增**: 集成了全新的红色不开心表情图标系统
 
 ## 🚀 手动创建Release步骤
 
@@ -22,12 +23,12 @@
 
 **标签版本 (Tag version):**
 ```
-v1.0.1
+v1.0.2
 ```
 
 **发布标题 (Release title):**
 ```
-崔子瑾诱捕器 v1.0.1 (修复版)
+崔子瑾诱捕器 v1.0.2 (图标版)
 ```
 
 **描述 (Description):**
@@ -43,10 +44,11 @@ v1.0.1
 ### 📦 安装说明
 
 **Windows:**
-- 下载 `cuizijin-trap-windows-v1.0.1-fixed.zip` 压缩包
+- 下载 `cuizijin-trap-windows-v1.0.2-with-icon.zip` 压缩包
 - 解压到任意目录
 - 以管理员身份运行 `崔子瑾诱捕器.exe`
 - 支持开机自启动和进程保护
+- 现在包含完整的图标系统
 
 ### ⚠️ 重要提醒
 - Windows 版本需要管理员权限才能启用完整功能
@@ -66,6 +68,12 @@ v1.0.1
 - 管理员权限
 - .NET Framework 4.7.2 或更高版本
 
+### 🎨 v1.0.2 新增内容
+- ✅ 全新的红色不开心表情图标设计
+- ✅ 完整的图标系统集成（窗口、托盘、通知）
+- ✅ 图标生成工具和转换系统
+- ✅ 跨平台图标支持（Windows/macOS/Linux）
+
 ### 🔧 v1.0.1 修复内容
 - ✅ 修复了JavaScript模块加载错误问题
 - ✅ 解决了Windows端"Cannot find module"错误
@@ -83,7 +91,7 @@ v1.0.1
 ### 步骤3: 上传文件
 
 1. 在 **"Attach binaries"** 区域，点击选择文件或直接拖拽
-2. 选择文件：`release/cuizijin-trap-windows-v1.0.1-fixed.zip`
+2. 选择文件：`release/cuizijin-trap-windows-v1.0.2-with-icon.zip`
 3. 等待文件上传完成（约106MB，可能需要几分钟）
 
 ### 步骤4: 发布

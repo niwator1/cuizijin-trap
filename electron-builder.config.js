@@ -28,17 +28,17 @@ module.exports = {
     }
   ],
   
-  // 额外文件
-  extraFiles: [
-    {
-      from: 'assets/icon.png',
-      to: 'assets/icon.png'
-    },
-    {
-      from: 'assets/tray-icon.png',
-      to: 'assets/tray-icon.png'
-    }
-  ],
+  // 额外文件 - 临时禁用图标文件
+  // extraFiles: [
+  //   {
+  //     from: 'assets/icon.png',
+  //     to: 'assets/icon.png'
+  //   },
+  //   {
+  //     from: 'assets/tray-icon.png',
+  //     to: 'assets/tray-icon.png'
+  //   }
+  // ],
   
   // 发布配置（用于自动更新）
   publish: {
@@ -83,7 +83,7 @@ module.exports = {
   // DMG 配置
   dmg: {
     title: '${productName} ${version}',
-    icon: 'assets/icon.png', // macOS图标
+    // icon: 'assets/icon.png', // macOS图标 - 临时禁用
     background: 'assets/dmg-background.png',
     window: {
       width: 540,
@@ -108,27 +108,23 @@ module.exports = {
   win: {
     target: [
       {
-        target: 'nsis',
-        arch: ['x64', 'ia32']
-      },
-      {
         target: 'portable',
         arch: ['x64']
       }
     ],
-    icon: 'assets/icon.png', // Windows图标
-    requestedExecutionLevel: 'requireAdministrator',
-    
-    // 代码签名配置
-    certificateFile: process.env.WIN_CSC_LINK || null,
-    certificatePassword: process.env.WIN_CSC_KEY_PASSWORD || null,
-    
-    // 时间戳服务器
-    timeStampServer: 'http://timestamp.digicert.com',
-    
-    // 文件版本信息
-    verifyUpdateCodeSignature: true,
-    publisherName: author
+    // icon: 'assets/icon.png', // Windows图标 - 临时禁用
+    requestedExecutionLevel: 'asInvoker', // 改为普通权限
+
+    // 代码签名配置 - 临时禁用
+    // certificateFile: process.env.WIN_CSC_LINK || null,
+    // certificatePassword: process.env.WIN_CSC_KEY_PASSWORD || null,
+
+    // 时间戳服务器 - 临时禁用
+    // timeStampServer: 'http://timestamp.digicert.com',
+
+    // 文件版本信息 - 临时禁用
+    // verifyUpdateCodeSignature: true,
+    // publisherName: author
   },
   
   // NSIS 安装程序配置
@@ -171,7 +167,7 @@ module.exports = {
         arch: ['x64']
       }
     ],
-    icon: 'assets/icon.png', // Linux图标
+    // icon: 'assets/icon.png', // Linux图标 - 临时禁用
     category: 'Utility',
     desktop: {
       Name: '崔子瑾诱捕器',

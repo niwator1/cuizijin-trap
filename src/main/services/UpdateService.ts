@@ -28,6 +28,11 @@ export class UpdateService extends EventEmitter {
    * 初始化自动更新器
    */
   private setupAutoUpdater(): void {
+    // 临时禁用自动更新功能，避免启动时的错误
+    // TODO: 在GitHub releases配置正确后重新启用
+    console.log('自动更新功能已禁用');
+    return;
+
     // 配置更新服务器
     if (process.env.NODE_ENV === 'development') {
       // 开发环境下禁用自动更新

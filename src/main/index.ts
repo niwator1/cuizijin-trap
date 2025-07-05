@@ -59,9 +59,9 @@ class MainApplication {
     // 初始化系统集成
     await this.systemIntegration.initialize();
 
-    // 初始化更新服务
+    // 初始化更新服务（暂时禁用自动检查）
     this.updateService.setMainWindow(this.windowManager.getMainWindow()!);
-    this.updateService.startAutoCheck();
+    // this.updateService.startAutoCheck(); // 临时禁用自动更新检查
 
     // 初始化监控服务
     this.setupMonitoringServices();
@@ -121,6 +121,8 @@ class MainApplication {
         contextIsolation: true,
         // enableRemoteModule: false, // 已弃用
         preload: path.join(__dirname, 'preload.js'),
+        webSecurity: false, // 临时禁用以便调试
+        allowRunningInsecureContent: true, // 允许不安全内容
       },
       show: false, // 先不显示，等加载完成后再显示
     });
@@ -149,17 +151,63 @@ class MainApplication {
         console.error('Failed to load development server, falling back to production build:', error);
         // 如果开发服务器连接失败，回退到生产构建
         await mainWindow.loadFile(path.join(__dirname, '../renderer/index.html'));
+        // 开发环境回退时也打开开发者工具
+        mainWindow.webContents.openDevTools();
       }
     } else {
       // 生产环境：加载打包后的文件
       const rendererPath = path.join(__dirname, '../renderer/index.html');
       console.log('Loading renderer from:', rendererPath);
       await mainWindow.loadFile(rendererPath);
+
+      // 临时在生产环境也启用开发者工具以便调试
+      mainWindow.webContents.openDevTools();
     }
 
     // 窗口准备好后显示
     mainWindow.once('ready-to-show', () => {
+      console.log('Main window is ready to show');
       mainWindow.show();
+    });
+
+    // 添加渲染进程崩溃处理
+    mainWindow.webContents.on('render-process-gone', (event, details) => {
+      console.error('Renderer process crashed:', details);
+      if (details.reason === 'crashed') {
+        // 尝试重新加载
+        setTimeout(() => {
+          if (!mainWindow.isDestroyed()) {
+            mainWindow.reload();
+          }
+        }, 1000);
+      }
+    });
+
+    // 监听渲染进程的控制台消息
+    mainWindow.webContents.on('console-message', (event, level, message, line, sourceId) => {
+      console.log(`[Renderer ${level}] ${message} (${sourceId}:${line})`);
+    });
+
+    // 监听渲染进程的未捕获异常
+    mainWindow.webContents.on('unresponsive', () => {
+      console.error('Renderer process became unresponsive');
+    });
+
+    mainWindow.webContents.on('responsive', () => {
+      console.log('Renderer process became responsive again');
+    });
+
+    // 监听页面加载事件
+    mainWindow.webContents.on('did-start-loading', () => {
+      console.log('Page started loading');
+    });
+
+    mainWindow.webContents.on('did-finish-load', () => {
+      console.log('Page finished loading');
+    });
+
+    mainWindow.webContents.on('did-fail-load', (event, errorCode, errorDescription, validatedURL) => {
+      console.error('Page failed to load:', errorCode, errorDescription, validatedURL);
     });
 
     // 窗口关闭时隐藏到托盘
@@ -733,6 +781,12 @@ class MainApplication {
     }
   }
 }
+
+// 设置命令行参数以提高兼容性
+app.commandLine.appendSwitch('--disable-web-security');
+app.commandLine.appendSwitch('--disable-features', 'VizDisplayCompositor');
+app.commandLine.appendSwitch('--disable-gpu-sandbox');
+app.commandLine.appendSwitch('--no-sandbox');
 
 // 确保只有一个应用实例
 const gotTheLock = app.requestSingleInstanceLock();

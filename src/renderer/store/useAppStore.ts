@@ -160,15 +160,19 @@ export const useAppStore = create<AppStore>()(
           const { sessionId, sessionExpiresAt } = get();
 
           // 首先检查本地会话是否过期
-          if (sessionExpiresAt && sessionExpiresAt.getTime() <= Date.now()) {
-            console.log('Local session expired, clearing auth state');
-            set({
-              isAuthenticated: false,
-              sessionId: null,
-              sessionExpiresAt: null
-            });
-            get().stopSessionRefreshTimer();
-            return;
+          if (sessionExpiresAt) {
+            // 确保sessionExpiresAt是Date对象
+            const expiresAt = sessionExpiresAt instanceof Date ? sessionExpiresAt : new Date(sessionExpiresAt);
+            if (expiresAt.getTime() <= Date.now()) {
+              console.log('Local session expired, clearing auth state');
+              set({
+                isAuthenticated: false,
+                sessionId: null,
+                sessionExpiresAt: null
+              });
+              get().stopSessionRefreshTimer();
+              return;
+            }
           }
 
           try {
@@ -217,10 +221,14 @@ export const useAppStore = create<AppStore>()(
           }
 
           // 检查本地会话是否已过期
-          if (sessionExpiresAt && sessionExpiresAt.getTime() <= Date.now()) {
-            console.log('Local session already expired');
-            await get().handleSessionExpiry();
-            return;
+          if (sessionExpiresAt) {
+            // 确保sessionExpiresAt是Date对象
+            const expiresAt = sessionExpiresAt instanceof Date ? sessionExpiresAt : new Date(sessionExpiresAt);
+            if (expiresAt.getTime() <= Date.now()) {
+              console.log('Local session already expired');
+              await get().handleSessionExpiry();
+              return;
+            }
           }
 
           try {
@@ -264,7 +272,9 @@ export const useAppStore = create<AppStore>()(
 
           // 计算刷新间隔：在会话过期前5分钟刷新，但最少每5分钟刷新一次
           const now = Date.now();
-          const expiresIn = sessionExpiresAt.getTime() - now;
+          // 确保sessionExpiresAt是Date对象
+          const expiresAt = sessionExpiresAt instanceof Date ? sessionExpiresAt : new Date(sessionExpiresAt);
+          const expiresIn = expiresAt.getTime() - now;
           const refreshInterval = Math.min(
             Math.max(expiresIn - 5 * 60 * 1000, 60 * 1000), // 至少1分钟后刷新
             5 * 60 * 1000 // 最多5分钟刷新一次
@@ -283,7 +293,9 @@ export const useAppStore = create<AppStore>()(
               return;
             }
 
-            const timeToExpiry = currentExpiresAt.getTime() - Date.now();
+            // 确保currentExpiresAt是Date对象
+            const expiresAt = currentExpiresAt instanceof Date ? currentExpiresAt : new Date(currentExpiresAt);
+            const timeToExpiry = expiresAt.getTime() - Date.now();
 
             // 如果会话即将在5分钟内过期，刷新会话
             if (timeToExpiry <= 5 * 60 * 1000) {
@@ -329,7 +341,9 @@ export const useAppStore = create<AppStore>()(
             return 0;
           }
 
-          const remaining = Math.max(0, sessionExpiresAt.getTime() - Date.now());
+          // 确保sessionExpiresAt是Date对象
+          const expiresAt = sessionExpiresAt instanceof Date ? sessionExpiresAt : new Date(sessionExpiresAt);
+          const remaining = Math.max(0, expiresAt.getTime() - Date.now());
           return Math.floor(remaining / 1000); // 返回秒数
         },
 

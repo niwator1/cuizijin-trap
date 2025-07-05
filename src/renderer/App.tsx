@@ -57,23 +57,42 @@ const App: React.FC = () => {
   // 应用初始化
   useEffect(() => {
     const initApp = async () => {
+      console.log('Starting app initialization...');
+
       try {
+        // 检查electronAPI是否可用
+        if (!window.electronAPI) {
+          console.error('electronAPI is not available');
+          throw new Error('electronAPI is not available');
+        }
+        console.log('electronAPI is available');
+
         // 初始化应用状态
+        console.log('Initializing app state...');
         await initialize();
-        
+        console.log('App state initialized');
+
         // 检查认证状态
+        console.log('Checking auth status...');
         await checkAuth();
+        console.log('Auth status checked');
 
         // 初始化实时通知服务
+        console.log('Enabling realtime notification service...');
         realtimeNotificationService.enable();
+        console.log('Realtime notification service enabled');
 
         // 初始化主题服务
+        console.log('Setting theme...');
         themeService.setTheme(theme);
+        console.log('Theme set');
 
+        console.log('App initialization completed successfully');
         setIsInitialized(true);
       } catch (error) {
         console.error('App initialization failed:', error);
-        setIsInitialized(true); // 即使失败也要显示界面
+        // 显示错误信息但仍然显示界面
+        setIsInitialized(true);
       }
     };
 
