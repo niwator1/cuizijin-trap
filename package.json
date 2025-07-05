@@ -55,7 +55,10 @@
     "test:electron:debug": "playwright test --config=playwright-electron.config.ts --debug",
     "test:electron:headed": "playwright test --config=playwright-electron.config.ts --headed",
     "electron": "electron .",
-    "electron:dev": "NODE_ENV=development electron ."
+    "electron:dev": "NODE_ENV=development electron .",
+    "build:windows:remote": "node scripts/trigger-windows-build.js build",
+    "build:windows:debug": "node scripts/trigger-windows-build.js build main --debug",
+    "build:status": "node scripts/trigger-windows-build.js status"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
