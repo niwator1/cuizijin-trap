@@ -29,12 +29,12 @@ module.exports = {
   ],
   
   // 排除的文件
-  extraFiles: [
-    {
-      from: 'assets/icon.png',
-      to: 'icon.png'
-    }
-  ],
+  // extraFiles: [
+  //   {
+  //     from: 'assets/icon.png',
+  //     to: 'icon.png'
+  //   }
+  // ], // 暂时禁用图标文件复制
   
   // 发布配置（用于自动更新）
   publish: {
@@ -47,7 +47,7 @@ module.exports = {
   // macOS 配置
   mac: {
     category: 'public.app-category.utilities',
-    icon: 'assets/icon.icns',
+    // icon: 'assets/icon.icns', // 暂时禁用图标
     hardenedRuntime: true,
     gatekeeperAssess: false,
     entitlements: 'assets/entitlements.mac.plist',
@@ -79,7 +79,7 @@ module.exports = {
   // DMG 配置
   dmg: {
     title: '${productName} ${version}',
-    icon: 'assets/icon.icns',
+    // icon: 'assets/icon.icns', // 暂时禁用图标
     background: 'assets/dmg-background.png',
     window: {
       width: 540,
@@ -112,7 +112,7 @@ module.exports = {
         arch: ['x64']
       }
     ],
-    icon: 'assets/icon.ico',
+    // icon: 'assets/icon.ico', // 暂时禁用图标
     requestedExecutionLevel: 'requireAdministrator',
     
     // 代码签名配置
@@ -137,9 +137,9 @@ module.exports = {
     shortcutName: '崔子瑾诱捕器',
     
     // 安装程序界面
-    installerIcon: 'assets/icon.ico',
-    uninstallerIcon: 'assets/icon.ico',
-    installerHeaderIcon: 'assets/icon.ico',
+    // installerIcon: 'assets/icon.ico', // 暂时禁用图标
+    // uninstallerIcon: 'assets/icon.ico', // 暂时禁用图标
+    // installerHeaderIcon: 'assets/icon.ico', // 暂时禁用图标
     
     // 许可协议
     license: 'LICENSE',
@@ -167,7 +167,7 @@ module.exports = {
         arch: ['x64']
       }
     ],
-    icon: 'assets/icon.png',
+    // icon: 'assets/icon.png', // 暂时禁用图标
     category: 'Utility',
     desktop: {
       Name: '崔子瑾诱捕器',
