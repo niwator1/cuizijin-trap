@@ -19,6 +19,18 @@ npm run release:github
 5. 推送到GitHub
 6. 自动触发GitHub Actions构建多平台包
 
+### 检查构建状态
+
+```bash
+# 检查当前构建状态
+npm run release:status
+```
+
+这个命令会显示：
+- 最近的构建记录
+- 当前构建进度
+- 构建结果和下载链接
+
 ### 方法二：手动触发构建
 
 如果您已经有了标签，可以手动触发构建：

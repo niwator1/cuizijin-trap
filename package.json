@@ -32,6 +32,7 @@
     "release:create": "./scripts/create-release.sh",
     "release:trigger": "node scripts/trigger-release.js",
     "release:github": "npm run build:prod && npm run release:create",
+    "release:status": "node scripts/check-build-status.js",
     "lint": "eslint src --ext .ts,.tsx",
     "lint:fix": "eslint src --ext .ts,.tsx --fix",
     "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx}\"",
