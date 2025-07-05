@@ -53,38 +53,50 @@ jobs:
       if: matrix.os == 'ubuntu-latest'
       run: npm run dist:linux
       
+    - name: List release files (macOS)
+      if: matrix.os == 'macos-latest'
+      run: |
+        echo "Release directory contents:"
+        ls -la release/ || echo "Release directory not found"
+
+    - name: List release files (Windows)
+      if: matrix.os == 'windows-latest'
+      run: |
+        echo "Release directory contents:"
+        dir release\ || echo "Release directory not found"
+
+    - name: List release files (Linux)
+      if: matrix.os == 'ubuntu-latest'
+      run: |
+        echo "Release directory contents:"
+        ls -la release/ || echo "Release directory not found"
+
     - name: Upload macOS artifacts
       if: matrix.os == 'macos-latest'
       uses: actions/upload-artifact@v4
       with:
         name: macos-build
-        path: |
-          release/*.dmg
-          release/*.zip
-          release/mac/
+        path: release/
         retention-days: 30
-        
+        if-no-files-found: warn
+
     - name: Upload Windows artifacts
       if: matrix.os == 'windows-latest'
       uses: actions/upload-artifact@v4
       with:
         name: windows-build
-        path: |
-          release/*.exe
-          release/win-unpacked/
+        path: release/
         retention-days: 30
-        
+        if-no-files-found: warn
+
     - name: Upload Linux artifacts
       if: matrix.os == 'ubuntu-latest'
       uses: actions/upload-artifact@v4
       with:
         name: linux-build
-        path: |
-          release/*.AppImage
-          release/*.deb
-          release/*.rpm
-          release/linux-unpacked/
+        path: release/
         retention-days: 30
+        if-no-files-found: warn
 
   release:
     needs: build
@@ -155,9 +167,6 @@ jobs:
         draft: false
         prerelease: false
         files: |
-          artifacts/windows-build/*.exe
-          artifacts/macos-build/*.dmg
-          artifacts/macos-build/*.zip
-          artifacts/linux-build/*.AppImage
-          artifacts/linux-build/*.deb
-          artifacts/linux-build/*.rpm
+          artifacts/windows-build/**/*
+          artifacts/macos-build/**/*
+          artifacts/linux-build/**/*
